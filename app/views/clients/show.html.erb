@@ -1,0 +1,12 @@
+<h1><%= @client.name %></h1>
+
+<ul>
+	<li><%= @client.email %></li>
+	<li><%= @client.phone %></li>
+	<li><%= @client.date_of_birth %></li>
+	<li><%= @client.home_address %></li>
+</ul>
+
+<%= link_to "All Clients", clients_path %> |
+<%= link_to "Edit Client", edit_client_path(@client) %> |
+<%= link_to "Past Assessments", client_assessments_path(@client, @assessment) %>

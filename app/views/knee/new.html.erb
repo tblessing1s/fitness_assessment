@@ -1,0 +1,23 @@
+<h1>Knee Strength Test</h1>
+
+<%= form_for([@assessment, @knee], url: assessment_knee_index_path(@assessment), method: :post) do |f| %>
+	<p>
+		<%= f.label :knee_flexion_left %></br>
+		<%= f.number_field :knee_flexion_left %>
+	</p>
+	<p>
+		<%= f.label :knee_flexion_right %></br>
+		<%= f.number_field :knee_flexion_right %>
+	</p>
+	<p>
+		<%= f.label :knee_extension_left %></br>
+		<%= f.number_field :knee_extension_left %>
+	</p>
+	<p>
+		<%= f.label :knee_extension_right %></br>
+		<%= f.number_field :knee_extension_right %>
+	</p>
+	<p>
+		<%= f.submit "Submit Knee Strength" %>
+	</p>
+<% end %>

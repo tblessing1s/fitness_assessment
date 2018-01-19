@@ -1,0 +1,3 @@
+<% @assessments.each do |assessment| %>
+	<li><%= link_to assessment.client_id, assessment_path(assessment) %></li>
+<% end %>

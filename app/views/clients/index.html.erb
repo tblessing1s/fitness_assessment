@@ -1,0 +1,10 @@
+<h1><%= pluralize(@clients.size, "Client") %></h1>
+
+<ul>
+	<% @clients.each do |client| %>
+	<li><%= link_to client.name, client_path(client) %></li>
+	<% end %>
+</ul>
+
+<%= link_to 'Create New Client', new_client_path %>
+<%= link_to 'Start New Assessment>>', new_client_assessment_path %>
