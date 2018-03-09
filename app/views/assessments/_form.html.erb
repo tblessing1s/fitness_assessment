@@ -1,0 +1,106 @@
+
+<%= form_for(@assessment) do |f| %>
+  <%= render "shared/errors" %>	
+  <div style="padding-bottom: 20px; text-align: center;">
+    <%= f.select :client_id, Client.all.collect { |c| [c.name, c.id]}, include_blank: true %> 
+  </div>
+<div id="accordion">
+  <div class="card">
+    <div class="card-header">
+      <h4 class="mb-0">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Lying on Back</a>
+	</h4>
+</div>
+    <div id="collapse1" class="panel-collapse collapse in">
+      <div class="panel-body">
+	<%= render 'assessments/partials/lying_on_back', f: f %>
+  </div>
+</div>
+</div>
+  <div class="card">
+    <div class="card-header">
+      <h4 class="mb-0">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Lying On Stomach</a>
+      </h4>
+	</div>
+    <div id="collapse2" class="panel-collapse collapse in">
+      <div class="panel-body">
+	<%= render 'assessments/partials/lying_on_stomach', f: f %>
+	  </div>
+	</div>
+  </div>
+</div>
+  <div class="card">
+    <div class="card-header">
+      <h4 class="mb-0">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Seated On Edge of Table</a>
+      </h4>
+    </div>
+    <div id="collapse3" class="panel-collapse collapse in">
+      <div class="panel-body">
+	<%= render 'assessments/partials/seated_on_edge_of_table', f: f %>
+	  </div>
+	</div>
+  </div>
+  <div class="card">
+    <div class="card-header">
+      <h4 class="mb-0">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">Bench Next To Wall</a>
+      </h4>
+    </div>
+    <div id="collapse4" class="panel-collapse collapse in">
+      <div class="panel-body">
+	<%= render 'assessments/partials/bench_next_to_wall', f: f %>
+	  </div>
+	</div>
+  </div>
+  <div class="card">
+    <div class="card-header">
+      <h4 class="mb-0">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">Use Incline Bench</a>
+      </h4>
+    </div>
+    <div id="collapse5" class="panel-collapse collapse in">
+      <div class="panel-body">
+	<%= render 'assessments/partials/use_incline_bench', f: f %>
+	  </div>
+	</div>
+  </div>
+  <div class="card">
+    <div class="card-header">
+      <h4 class="mb-0">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse6">Lying On Bench</a>
+      </h4>
+    </div>
+    <div id="collapse6" class="panel-collapse collapse in">
+      <div class="panel-body">
+    <%= render 'assessments/partials/lying_on_bench', f: f %>
+	  </div>
+	</div>
+  </div>
+  <div class="card">
+    <div class="card-header">
+      <h4 class="mb-0">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse7">Seated In Chair</a>
+      </h4>
+    </div>
+    <div id="collapse7" class="panel-collapse collapse in">
+      <div class="panel-body">
+	<%= render 'assessments/partials/seated_in_chair', f: f %>
+	  </div>
+	</div>
+  </div>
+  <div class="card">
+    <div class="card-header">
+      <h4 class="mb-0">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse8">Lying On Floor</a>
+      </h4>
+    </div>
+    <div id="collapse8" class="panel-collapse collapse in">
+      <div class="panel-body">
+   <%= render 'assessments/partials/lying_on_floor', f: f %>
+	  </div>
+	</div>
+  </div>
+    <%= f.submit "Submit Assessment", class: "btn btn-primary btn-lg btn-block" %>
+<% end %>

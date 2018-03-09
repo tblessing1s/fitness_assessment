@@ -1,6 +1,3 @@
-<h2>Start A New Assessment</h2>
 
-<%= form_for(@assessment) do |f| %>
-	<%= f.select :client_id, Client.all.collect { |c| [c.name, c.id]}, include_blank: true %>
-	<%= f.submit "Begin Assessment >>" %>
-<% end %>
+	<h2 align="center">Start A New Assessment</h2>
+	<%= render 'form' %>

@@ -1,0 +1,149 @@
+<div class="page-break">
+	<h2><center>Shoulder </center><hr><h5><i>Deviation of Antagonist Muscles</i></h5></hr></h2>
+	<table class= "table table-bordered">
+		<tr>
+			<th scope="col"> </th>
+			<th scope="col"> Left </th>
+			<th scope="col"> Right </th>
+		</tr>
+		<tr>
+			<th scope="col"> Shoulder Flexion </th>
+			<td><%= @assessment.shoulder.shoulder_flexion_left %></td>
+			<td><%= @assessment.shoulder.shoulder_flexion_right %></td>
+			<td><%= muscle_balance(@assessment.shoulder.flexion_difference[:category], @assessment.shoulder.flexion_difference[:percentage]) %></td>
+		</tr>
+		<tr>
+			<th scope="col"> Shoulder Extension </th>
+			<td><%= @assessment.shoulder.shoulder_extension_left %></td>
+			<td><%= @assessment.shoulder.shoulder_extension_right %></td>
+			<td><%= muscle_balance(@assessment.shoulder.extension_difference[:category], @assessment.shoulder.extension_difference[:percentage]) %></td>
+		</tr>
+			<td></td>
+			<td><%= muscle_balance(@assessment.shoulder.flexion_extension_difference_left[:category], @assessment.shoulder.flexion_extension_difference_left[:percentage]) %></td>
+			<td><%= muscle_balance(@assessment.shoulder.flexion_extension_difference_right[:category], @assessment.shoulder.flexion_extension_difference_right[:percentage]) %></td>
+		<tr>
+			<th scope="col"> </th>
+			<th scope="col"> Left </th>
+			<th scope="col"> Right </th>
+		</tr>
+		<tr>
+			<th scope="col"> Shoulder Abduction </th>
+			<td><%= @assessment.shoulder.shoulder_abduction_left %></td>
+			<td><%= @assessment.shoulder.shoulder_abduction_right %></td>
+			<td><%= muscle_balance(@assessment.shoulder.abduction_difference[:category], @assessment.shoulder.abduction_difference[:percentage]) %></td>
+		</tr>
+		<tr>
+			<th scope="col"> Shoulder Adduction </th>
+			<td><%= @assessment.shoulder.shoulder_adduction_left %></td>
+			<td><%= @assessment.shoulder.shoulder_adduction_right %></td>
+			<td><%= muscle_balance(@assessment.shoulder.adduction_difference[:category], @assessment.shoulder.adduction_difference[:percentage]) %></td>
+		</tr>
+			<td></td>
+			<td><%= muscle_balance(@assessment.shoulder.abduction_adduction_difference_left[:category], @assessment.shoulder.abduction_adduction_difference_left[:percentage]) %></td>
+			<td><%= muscle_balance(@assessment.shoulder.abduction_adduction_difference_right[:category], @assessment.shoulder.abduction_adduction_difference_right[:percentage]) %></td>
+		<tr>
+			<th scope="col"> </th>
+			<th scope="col"> Left </th>
+			<th scope="col"> Right </th>
+		</tr>
+		<tr>
+			<th scope="col">Shoulder Internal Rotation</th>
+			<td><%= @assessment.shoulder.shoulder_internal_rotation_left %></td>
+			<td><%= @assessment.shoulder.shoulder_internal_rotation_right %></td>
+			<td><%= muscle_balance(@assessment.shoulder.internal_rotation_difference[:category], @assessment.shoulder.internal_rotation_difference[:percentage]) %></td>
+		</tr>
+		<tr>
+			<th scope="col"> Shoulder External Rotation </th>
+			<td><%= @assessment.shoulder.shoulder_external_rotation_left %></td>
+			<td><%= @assessment.shoulder.shoulder_external_rotation_right %></td>
+			<td><%= muscle_balance(@assessment.shoulder.external_rotation_difference[:category], @assessment.shoulder.external_rotation_difference[:percentage]) %></td>
+		</tr>
+			<td></td>
+			<td><%= muscle_balance(@assessment.shoulder.internal_external_rotation_difference_left[:category], @assessment.shoulder.internal_external_rotation_difference_left[:percentage]) %></td>
+			<td><%= muscle_balance(@assessment.shoulder.internal_external_rotation_difference_right[:category], @assessment.shoulder.internal_external_rotation_difference_right[:percentage]) %></td>
+		<tr>
+			<th scope="col"> </th>
+			<th scope="col"> Left </th>
+			<th scope="col"> Right </th>
+		</tr>
+		<tr>
+			<th scope="col"> Shoulder Horizontal Abduction </th>
+			<td><%= @assessment.shoulder.shoulder_horizontal_abduction_left %></td>
+			<td><%= @assessment.shoulder.shoulder_horizontal_abduction_right %></td>
+			<td><%= muscle_balance(@assessment.shoulder.horizontal_abduction_difference[:category], @assessment.shoulder.horizontal_abduction_difference[:percentage]) %></td>
+		</tr>
+		<tr>
+			<th scope="col"> Shoulder Horizontal Adduction </th>
+			<td><%= @assessment.shoulder.shoulder_horizontal_adduction_left %></td>
+			<td><%= @assessment.shoulder.shoulder_horizontal_adduction_right %></td>
+			<td><%= muscle_balance(@assessment.shoulder.horizontal_adduction_difference[:category], @assessment.shoulder.horizontal_adduction_difference[:percentage]) %></td>
+		</tr>
+			<td></td>
+			<td><%= muscle_balance(@assessment.shoulder.horizontal_abduction_adduction_difference_left[:category], @assessment.shoulder.horizontal_abduction_adduction_difference_left[:percentage]) %></td>
+			<td><%= muscle_balance(@assessment.shoulder.horizontal_abduction_adduction_difference_right[:category], @assessment.shoulder.horizontal_abduction_adduction_difference_right[:percentage]) %></td>
+	</table>
+	<br>
+		<h5><i>Deviation of Joint as a Whole</i></h5>
+	<table class= "table table-bordered">
+		<tr>
+			<th scope="col"> </th>
+			<th scope="col"> Left </th>
+			<th scope="col"> Right </th>
+		</tr>
+		<tr>
+			<th scope="col"> Shoulder Flexion </th>
+			<td><%= muscle_balance(@assessment.shoulder.percent_deviation_shoulder_flexion_left[:category], @assessment.shoulder.percent_deviation_shoulder_flexion_left[:percentage]) %></td>
+			<td><%= muscle_balance(@assessment.shoulder.percent_deviation_shoulder_flexion_right[:category], @assessment.shoulder.percent_deviation_shoulder_flexion_right[:percentage]) %></td>
+		</tr>
+		<tr>
+			<th scope="col"> Shoulder Extension </th>
+			<td><%= muscle_balance(@assessment.shoulder.percent_deviation_shoulder_extension_left[:category], @assessment.shoulder.percent_deviation_shoulder_extension_left[:percentage]) %></td>
+			<td><%= muscle_balance(@assessment.shoulder.percent_deviation_shoulder_extension_right[:category], @assessment.shoulder.percent_deviation_shoulder_extension_right[:percentage]) %></td>
+		</tr>
+		<tr>
+			<th scope="col"> </th>
+			<th scope="col"> Left </th>
+			<th scope="col"> Right </th>
+		</tr>
+		<tr>
+			<th scope="col"> Shoulder Abduction </th>
+			<td><%= muscle_balance(@assessment.shoulder.percent_deviation_shoulder_abduction_left[:category], @assessment.shoulder.percent_deviation_shoulder_abduction_left[:percentage]) %></td>
+			<td><%= muscle_balance(@assessment.shoulder.percent_deviation_shoulder_abduction_right[:category], @assessment.shoulder.percent_deviation_shoulder_abduction_right[:percentage]) %></td>
+		</tr>
+		<tr>
+			<th scope="col"> Shoulder Adduction </th>
+			<td><%= muscle_balance(@assessment.shoulder.percent_deviation_shoulder_adduction_left[:category], @assessment.shoulder.percent_deviation_shoulder_adduction_left[:percentage]) %></td>
+			<td><%= muscle_balance(@assessment.shoulder.percent_deviation_shoulder_adduction_right[:category], @assessment.shoulder.percent_deviation_shoulder_adduction_right[:percentage]) %></td>
+		</tr>
+		<tr>
+			<th scope="col"> </th>
+			<th scope="col"> Left </th>
+			<th scope="col"> Right </th>
+		</tr>
+		<tr>
+			<th scope="col">Shoulder Internal Rotation</th>
+			<td><%= muscle_balance(@assessment.shoulder.percent_deviation_shoulder_internal_rotation_left[:category], @assessment.shoulder.percent_deviation_shoulder_internal_rotation_left[:percentage]) %></td>
+			<td><%= muscle_balance(@assessment.shoulder.percent_deviation_shoulder_internal_rotation_right[:category], @assessment.shoulder.percent_deviation_shoulder_internal_rotation_right[:percentage]) %></td>
+		</tr>
+		<tr>
+			<th scope="col"> Shoulder External Rotation </th>
+			<td><%= muscle_balance(@assessment.shoulder.percent_deviation_shoulder_external_rotation_left[:category], @assessment.shoulder.percent_deviation_shoulder_external_rotation_left[:percentage]) %></td>
+			<td><%= muscle_balance(@assessment.shoulder.percent_deviation_shoulder_external_rotation_right[:category], @assessment.shoulder.percent_deviation_shoulder_external_rotation_right[:percentage]) %></td>
+		</tr>
+		<tr>
+			<th scope="col"> </th>
+			<th scope="col"> Left </th>
+			<th scope="col"> Right </th>
+		</tr>
+		<tr>
+			<th scope="col"> Shoulder Horizontal Abduction </th>
+			<td><%= muscle_balance(@assessment.shoulder.percent_deviation_shoulder_horizontal_abduction_left[:category], @assessment.shoulder.percent_deviation_shoulder_horizontal_abduction_left[:percentage]) %></td>
+			<td><%= muscle_balance(@assessment.shoulder.percent_deviation_shoulder_horizontal_abduction_right[:category], @assessment.shoulder.percent_deviation_shoulder_horizontal_abduction_right[:percentage]) %></td>
+		</tr>
+		<tr>
+			<th scope="col"> Shoulder Horizontal Adduction </th>
+			<td><%= muscle_balance(@assessment.shoulder.percent_deviation_shoulder_horizontal_adduction_left[:category], @assessment.shoulder.percent_deviation_shoulder_horizontal_adduction_left[:percentage]) %></td>
+			<td><%= muscle_balance(@assessment.shoulder.percent_deviation_shoulder_horizontal_adduction_right[:category], @assessment.shoulder.percent_deviation_shoulder_horizontal_adduction_right[:percentage]) %></td>
+		</tr>
+	</table>
+</div>

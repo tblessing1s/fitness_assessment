@@ -1,0 +1,74 @@
+<div class="page-break">
+	<h2><center>Core</center><hr><h5><i>Deviation of Antagonist Muscles</i></h5></hr></h2>
+	<table class= "table table-bordered">
+		<tr>
+			<th scope="col"> </th>
+			<th scope="col"> Left </th>
+			<th scope="col"> Right </th>
+		</tr>
+		<tr>
+			<th scope="col"> Trunk Lateral Flexion</th>
+			<td><%= @assessment.core.trunk_lateral_flexion_left %></td>
+			<td><%= @assessment.core.trunk_lateral_flexion_right %></td>
+			<td><%= muscle_balance(@assessment.core.trunk_lateral_flexion_difference[:category], @assessment.core.trunk_lateral_flexion_difference[:percentage]) %></td>
+		</tr>
+		<tr>
+			<th scope="col"> Trunk Rotation</th>
+			<td><%= @assessment.core.trunk_rotation_left %></td>
+			<td><%= @assessment.core.trunk_rotation_right %></td>
+			<td><%= muscle_balance(@assessment.core.trunk_rotation_difference[:category], @assessment.core.trunk_rotation_difference[:percentage]) %></td>
+		</tr>
+			<th scope="col"> </th>
+			<th scope="col", colspan="2", style="align:center;"> Center </th>
+		<tr>
+			<th scope="col"> Trunk Flexion</th>
+			<td colspan="2"><%= @assessment.core.trunk_flexion %></td>
+		</tr>
+		<tr>
+			<th scope="col"> Trunk Extension</th>
+			<td colspan="2"><%= @assessment.core.trunk_extension %></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><%= muscle_balance(@assessment.core.trunk_flexion_extension_difference[:category], @assessment.core.trunk_flexion_extension_difference[:percentage]) %>	
+			</td>
+		</tr>
+		<tr>
+			<th scope="col"> Pelvic Stability</th>
+			<td colspan="2"><%= @assessment.core.pelvic_stability %></td>
+		</tr>
+	</table>
+	<br>
+	<h5><i>Deviation of Joint as a Whole</i></h5>
+	<table class= "table table-bordered">
+		<tr>
+			<th scope="col"> </th>
+			<th scope="col"> Left </th>
+			<th scope="col"> Right </th>
+		</tr>
+		<tr>
+			<th scope="col"> Trunk Lateral Flexion</th>
+			<td><%= muscle_balance(@assessment.core.percent_deviation_trunk_lateral_flexion_left[:category], @assessment.core.percent_deviation_trunk_lateral_flexion_left[:percentage]) %></td>
+			<td><%= muscle_balance(@assessment.core.percent_deviation_trunk_lateral_flexion_right[:category], @assessment.core.percent_deviation_trunk_lateral_flexion_right[:percentage]) %></td>
+		</tr>
+		<tr>
+			<th scope="col"> Trunk Rotation</th>
+			<td><%= muscle_balance(@assessment.core.percent_deviation_trunk_rotation_left[:category], @assessment.core.percent_deviation_trunk_rotation_left[:percentage]) %></td>
+			<td><%= muscle_balance(@assessment.core.percent_deviation_trunk_rotation_right[:category], @assessment.core.percent_deviation_trunk_rotation_right[:percentage]) %></td>
+		</tr>
+			<th scope="col"> </th>
+			<th scope="col", colspan="2", style="align:center;"> Center </th>
+		<tr>
+			<th scope="col"> Trunk Flexion</th>
+			<td colspan="2"><%= muscle_balance(@assessment.core.percent_deviation_trunk_flexion[:category], @assessment.core.percent_deviation_trunk_flexion[:percentage]) %></td>
+		</tr>
+		<tr>
+			<th scope="col"> Trunk Extension</th>
+			<td colspan="2"><%= muscle_balance(@assessment.core.percent_deviation_trunk_extension[:category], @assessment.core.percent_deviation_trunk_extension[:percentage]) %></td>
+		</tr>
+		<tr>
+			<th scope="col"> Pelvic Stability</th>
+			<td colspan="2"><%= muscle_balance(@assessment.core.percent_deviation_pelvic_stability[:category], @assessment.core.percent_deviation_pelvic_stability[:percentage]) %></td>
+		</tr>
+	</table>
+</div>	

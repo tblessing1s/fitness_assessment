@@ -1,0 +1,48 @@
+<div class="page-break">
+	<h2><center>Knee </center><hr><h5><i>Deviation of Antagonist Muscles</i></h5></hr></h2>
+	<table class= "table table-bordered">
+		<tr >
+			<th scope="col">  </th>
+			<th scope="col"> Left </th>
+			<th scope="col"> Right </th>
+		</tr>
+		<tr >
+			<th> Knee Flexion </th>
+			<td><%= @assessment.knee.knee_flexion_left %></td>
+			<td><%=  @assessment.knee.knee_flexion_right %></td>
+			<td><%= muscle_balance(@assessment.knee.flexion_difference[:category], @assessment.knee.flexion_difference[:percentage]) %></td>	
+		</tr>
+		<tr>
+			<th>Knee Extension</th>
+			<td> <%=  @assessment.knee.knee_extension_left %></td>
+			<td><%=  @assessment.knee.knee_extension_right %></td>
+			<td><%= muscle_balance(@assessment.knee.extension_difference[:category], @assessment.knee.extension_difference[:percentage]) %></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><%= muscle_balance(@assessment.knee.flexion_extension_difference_left[:category], @assessment.knee.flexion_extension_difference_left[:percentage]) %></td>
+			<td><%= muscle_balance(@assessment.knee.flexion_extension_difference_right[:category], @assessment.knee.flexion_extension_difference_right[:percentage]) %></td>
+		</tr>
+	</table>
+	<br>	
+		<h5><i>Deviation of Joint as a Whole</i></h5>
+	<table class= "table table-bordered">
+		<tr >
+			<th scope="col">  </th>
+			<th scope="col"> Left </th>
+			<th scope="col"> Right </th>
+		</tr>
+		<tr >
+			<th> Knee Flexion </th>
+			<td><%= muscle_balance(@assessment.knee.percent_deviation_flexion_left[:category], @assessment.knee.percent_deviation_flexion_left[:percentage]) %></td>
+			<td><%= muscle_balance(@assessment.knee.percent_deviation_flexion_right[:category], @assessment.knee.percent_deviation_flexion_right[:percentage]) %></td>	
+		</tr>
+		<tr>
+			<th>Knee Extension</th>
+			<td><%= muscle_balance(@assessment.knee.percent_deviation_extension_left[:category], @assessment.knee.percent_deviation_extension_left[:percentage]) %></td>
+			<td><%= muscle_balance(@assessment.knee.percent_deviation_extension_right[:category], @assessment.knee.percent_deviation_extension_right[:percentage]) %></td>
+		</tr>
+
+	</table>
+
+</div>

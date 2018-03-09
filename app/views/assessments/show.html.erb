@@ -1,10 +1,37 @@
-<h2><%= @assessment.client.name %></h2>
 
-
-	<li><%=  @assessment.knee.knee_flexion_left %></li>
-	<li><%=  @assessment.knee.knee_flexion_right %></li>
-	<li><%=  @assessment.knee.knee_extension_left %></li>
-	<li><%=  @assessment.knee.knee_extension_right %></li>
-
-
-
+<div class="center">
+	<h2><%= @assessment.client.name %>'s Assessment</h2>
+	<p>
+		<%= render 'assessments/assessment_results/overview_results' %></br>
+	</p>
+	<p style="padding-top: 40px;">
+		<%= render 'assessments/assessment_results/knee_results' %>
+	</p>
+	<p>
+		<%= render 'assessments/assessment_results/hip_results' %>
+	</p>
+	<p>
+		<%= render 'assessments/assessment_results/scapula_results' %>
+	</p>
+	<p>
+		<%= render 'assessments/assessment_results/shoulder_results' %>
+	</p>
+	<p>
+		<%= render 'assessments/assessment_results/elbow_results' %>
+	</p>
+	<p>
+		<%= render 'assessments/assessment_results/wrist_results' %>
+	</p>
+	<p>
+		<%= render 'assessments/assessment_results/ankle_results' %>
+	</p>
+	<p>
+		<%= render 'assessments/assessment_results/core_results' %>
+	</p>
+</div>	
+<% content_for :side do %>
+	<a class="nav-link"><%= link_to 'All Clients', clients_path  %></a>
+	<a class="nav-link"><%= link_to "Client's Page", client_path(@assessment.client) %></a>
+	<a class="nav-link"><%= link_to 'Edit Assessment', edit_assessment_path(@assessment) %></a>
+	<a class="nav-link"><%= link_to 'Delete Assessment', assessment_path(@assessment), method: :delete, data: { confirm: 'Are you sure you would like to delete?'} %></a>
+<% end %>

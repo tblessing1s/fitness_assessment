@@ -1,0 +1,94 @@
+<div class="page-break">
+	<h2><center>Ankle </center><hr><h5><i>Deviation of Antagonist Muscles</i></h5></hr></h2>
+	<table class= "table table-bordered">
+		<tr>
+			<th scope="col"> </th>
+			<th scope="col"> Left </th>
+			<th scope="col"> Right </th>
+		</tr>
+		<tr>
+			<th scope="col"> Ankle Plantar Flexion</th>
+			<td><%= @assessment.ankle.ankle_plantar_flexion_left %></td>
+			<td><%= @assessment.ankle.ankle_plantar_flexion_right %></td>
+			<td><%= muscle_balance(@assessment.ankle.plantar_flexion_difference[:category], @assessment.ankle.plantar_flexion_difference[:percentage]) %></td>
+		</tr>
+		<tr>
+			<th scope="col"> Ankle Dorsiflexion</th>
+			<td><%= @assessment.ankle.ankle_dorsiflexion_left %></td>
+			<td><%= @assessment.ankle.ankle_dorsiflexion_right %></td>
+			<td><%= muscle_balance(@assessment.ankle.dorsiflexion_difference[:category], @assessment.ankle.dorsiflexion_difference[:percentage]) %></td>
+		</tr>
+			<td></td>
+			<td><%= muscle_balance(@assessment.ankle.plantar_flexion_dorsiflexion_difference_left[:category], @assessment.ankle.plantar_flexion_dorsiflexion_difference_left[:percentage]) %></td>
+			<td><%= muscle_balance(@assessment.ankle.plantar_flexion_dorsiflexion_difference_right[:category], @assessment.ankle.plantar_flexion_dorsiflexion_difference_right[:percentage]) %></td>
+		<tr>
+			<th scope="col"> </th>
+			<th scope="col"> Left </th>
+			<th scope="col"> Right </th>
+		</tr>
+		<tr>
+			<th scope="col"> Ankle Inversion</th>
+			<td><%= @assessment.ankle.ankle_inversion_left %></td>
+			<td><%= @assessment.ankle.ankle_inversion_right %></td>
+			<td><%= muscle_balance(@assessment.ankle.inversion_difference[:category], @assessment.ankle.inversion_difference[:percentage]) %></td>
+		</tr>
+		<tr>
+			<th scope="col"> Ankle Eversion</th>
+			<td><%= @assessment.ankle.ankle_eversion_left %></td>
+			<td><%= @assessment.ankle.ankle_eversion_right %></td>
+			<td><%= muscle_balance(@assessment.ankle.eversion_difference[:category], @assessment.ankle.eversion_difference[:percentage]) %></td>
+		</tr>
+			<td></td>
+			<td><%= muscle_balance(@assessment.ankle.inversion_eversion_difference_left[:category], @assessment.ankle.inversion_eversion_difference_left[:percentage]) %></td>
+			<td><%= muscle_balance(@assessment.ankle.inversion_eversion_difference_right[:category], @assessment.ankle.inversion_eversion_difference_right[:percentage]) %></td>
+	</table>
+	<br>	
+		<h5><i>Deviation of Joint as a Whole</i></h5>
+	<table class= "table table-bordered">
+		<tr>
+			<th scope="col"> </th>
+			<th scope="col"> Left </th>
+			<th scope="col"> Right </th>
+		</tr>
+		<tr>
+			<th scope="col"> Ankle Plantar Flexion</th>
+			<td><%= muscle_balance(@assessment.ankle.percent_deviation_ankle_plantar_flexion_left[:category], @assessment.ankle.percent_deviation_ankle_plantar_flexion_left[:percentage]) %></td>
+			<td><%= muscle_balance(@assessment.ankle.percent_deviation_ankle_plantar_flexion_right[:category], @assessment.ankle.percent_deviation_ankle_plantar_flexion_right[:percentage]) %></td>	
+		</tr>
+		<tr>
+			<th scope="col"> Ankle Dorsiflexion</th>
+			<td><%= muscle_balance(@assessment.ankle.percent_deviation_ankle_dorsiflexion_left[:category], @assessment.ankle.percent_deviation_ankle_dorsiflexion_left[:percentage]) %></td>
+			<td><%= muscle_balance(@assessment.ankle.percent_deviation_ankle_dorsiflexion_right[:category], @assessment.ankle.percent_deviation_ankle_dorsiflexion_right[:percentage]) %></td>	
+		</tr>
+
+		<tr>
+			<th scope="col"> </th>
+			<th scope="col"> Left </th>
+			<th scope="col"> Right </th>
+		</tr>
+		<tr>
+			<th scope="col"> Ankle Inversion</th>
+			<td><%= muscle_balance(@assessment.ankle.percent_deviation_ankle_inversion_left[:category], @assessment.ankle.percent_deviation_ankle_inversion_left[:percentage]) %></td>
+			<td><%= muscle_balance(@assessment.ankle.percent_deviation_ankle_inversion_right[:category], @assessment.ankle.percent_deviation_ankle_inversion_right[:percentage]) %></td>	
+		</tr>
+		<tr>
+			<th scope="col"> Ankle Eversion</th>
+			<td><%= muscle_balance(@assessment.ankle.percent_deviation_ankle_eversion_left[:category], @assessment.ankle.percent_deviation_ankle_eversion_left[:percentage]) %></td>
+			<td><%= muscle_balance(@assessment.ankle.percent_deviation_ankle_eversion_right[:category], @assessment.ankle.percent_deviation_ankle_eversion_right[:percentage]) %></td>	
+		</tr>
+
+	</table>
+</div>
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	

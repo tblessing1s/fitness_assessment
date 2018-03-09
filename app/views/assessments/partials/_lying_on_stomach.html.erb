@@ -1,0 +1,71 @@
+<div class="container">
+  <div class="row">
+  	<div class="col">	
+	<%= f.fields_for :ankle, Ankle.new do |b| %>
+	<p>
+		<%= b.label :ankle_plantar_flexion_left %></br>
+		<%= b.number_field :ankle_plantar_flexion_left %>
+	</p>
+	<% end %>
+	<%= f.fields_for :hip, Hip.new do |b| %>
+	<p>
+		<%= b.label :hip_internal_rotation_0_left %></br>
+		<%= b.number_field :hip_internal_rotation_0_left %>
+	</p>
+	<% end %>
+	</div>
+	<div class="col">
+	<%= f.fields_for :ankle, Ankle.new do |b| %>
+	<p>
+		<%= b.label :ankle_plantar_flexion_right %></br>
+		<%= b.number_field :ankle_plantar_flexion_right %>
+	</p>
+	<% end %>
+				
+	<%= f.fields_for :hip, Hip.new do |b| %>
+	<p>
+		<%= b.label :hip_internal_rotation_0_right %></br>
+		<%= b.number_field :hip_internal_rotation_0_right %>
+	</p>
+	</div>
+  </div>
+  <div class="row">
+	<div class="col">
+	<p>
+		<%= b.label :hip_external_rotation_0_left %></br>
+		<%= b.number_field :hip_external_rotation_0_left %>
+	</p>
+	<p>
+		<%= b.label :hip_extension_left %></br>
+		<%= b.number_field :hip_extension_left %>
+	</p>
+	</div>
+	<div class="col">
+	<p>
+		<%= b.label :hip_external_rotation_0_right %></br>
+		<%= b.number_field :hip_external_rotation_0_right %>
+	</p>
+	<p>
+		<%= b.label :hip_extension_right %></br>
+		<%= b.number_field :hip_extension_right %>
+	</p>
+	<% end %>
+	</div>
+  </div>
+  <div class="row">
+	<div class="col">
+	<%= f.fields_for :knee, Knee.new do |b| %>
+	<p>
+		<%= b.label :knee_flexion_left %></br>
+		<%= b.number_field :knee_flexion_left %>
+	</p>
+	</div>
+	<div class="col">
+	<p>
+		<%= b.label :knee_flexion_right %></br>
+		<%= b.number_field :knee_flexion_right %>
+	</p>
+	<% end %>
+	</div>
+  </div>
+</div>

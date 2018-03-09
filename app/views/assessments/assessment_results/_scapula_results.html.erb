@@ -1,0 +1,116 @@
+<div class="page-break">
+	<h2><center>Scapula</center><hr><h5><i>Deviation of Antagonist Muscles</i></h5></hr></h2>
+	<table class= "table table-bordered">
+		<tr>
+			<th scope="col"> </th>
+			<th scope="col"> Left </th>
+			<th scope="col"> Right </th>
+		</tr>
+		<tr>
+			<th scope="col"> Scapula Elevation </th>
+			<td><%= @assessment.scapula.scapula_elevation_left %></td>
+			<td><%= @assessment.scapula.scapula_elevation_right %></td>
+			<td><%= muscle_balance(@assessment.scapula.elevation_difference[:category], @assessment.scapula.elevation_difference[:percentage]) %></td>
+		</tr>
+		<tr>
+			<th scope="col"> Scapula Depression </th>
+			<td><%= @assessment.scapula.scapula_depression_left %></td>
+			<td><%= @assessment.scapula.scapula_depression_right %></td>
+			<td><%= muscle_balance(@assessment.scapula.depression_difference[:category], @assessment.scapula.depression_difference[:percentage]) %></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><%= muscle_balance(@assessment.scapula.elevation_depression_difference_left[:category], @assessment.scapula.elevation_depression_difference_left[:percentage]) %></td>
+			<td><%= muscle_balance(@assessment.scapula.elevation_depression_difference_right[:category], @assessment.scapula.elevation_depression_difference_right[:percentage]) %></td>
+		</tr>
+		<tr>
+			<th scope="col"> </th>
+			<th scope="col"> Left </th>
+			<th scope="col"> Right </th>
+		</tr>
+		<tr>
+			<th scope="col"> Scapula Protraction </th>
+			<td><%= @assessment.scapula.scapula_protraction_left %></td>
+			<td><%= @assessment.scapula.scapula_protraction_right %></td>
+			<td><%= muscle_balance(@assessment.scapula.protraction_difference[:category], @assessment.scapula.protraction_difference[:percentage]) %></td>
+		</tr>
+		<tr>
+			<th scope="col"> Scapula Retraction </th>
+			<td><%= @assessment.scapula.scapula_retraction_left %></td>
+			<td><%= @assessment.scapula.scapula_retraction_right %></td>
+			<td><%= muscle_balance(@assessment.scapula.retraction_difference[:category], @assessment.scapula.retraction_difference[:percentage]) %></td>
+		</tr>
+			<td></td>
+			<td><%= muscle_balance(@assessment.scapula.protraction_retraction_difference_left[:category], @assessment.scapula.protraction_retraction_difference_left[:percentage]) %></td>
+			<td><%= muscle_balance(@assessment.scapula.protraction_retraction_difference_right[:category], @assessment.scapula.protraction_retraction_difference_right[:percentage]) %></td>
+		<tr>
+			<th scope="col"> </th>
+			<th scope="col"> Left </th>
+			<th scope="col"> Right </th>
+		</tr>
+		<tr>
+			<th scope="col"> Scapula Upward Rotation </th>
+			<td><%= @assessment.scapula.scapula_upward_rotation_left %></td>
+			<td><%= @assessment.scapula.scapula_upward_rotation_right %></td>
+			<td><%= muscle_balance(@assessment.scapula.upward_rotation_difference[:category], @assessment.scapula.upward_rotation_difference[:percentage]) %></td>
+		</tr>
+		<tr>
+			<th scope="col"> Scapula Downward Rotation </th>
+			<td><%= @assessment.scapula.scapula_downward_rotation_left %></td>
+			<td><%= @assessment.scapula.scapula_downward_rotation_right %></td>
+			<td><%= muscle_balance(@assessment.scapula.downward_rotation_difference[:category], @assessment.scapula.downward_rotation_difference[:percentage]) %></td>
+		</tr>
+			<td></td>
+			<td><%= muscle_balance(@assessment.scapula.upward_downward_rotation_difference_left[:category], @assessment.scapula.upward_downward_rotation_difference_left[:percentage]) %></td>
+			<td><%= muscle_balance(@assessment.scapula.upward_downward_rotation_difference_right[:category], @assessment.scapula.upward_downward_rotation_difference_right[:percentage]) %></td>
+	</table>
+	<h5><i>Deviation of Joint as a Whole</i></h5>
+	<table class= "table table-bordered">
+		<tr>
+			<th scope="col"> </th>
+			<th scope="col"> Left </th>
+			<th scope="col"> Right </th>
+		</tr>
+		<tr>
+			<th scope="col"> Scapula Elevation </th>
+			<td><%= muscle_balance(@assessment.scapula.percent_deviation_scapula_elevation_left[:category], @assessment.scapula.percent_deviation_scapula_elevation_left[:percentage]) %></td>
+			<td><%= muscle_balance(@assessment.scapula.percent_deviation_scapula_elevation_right[:category], @assessment.scapula.percent_deviation_scapula_elevation_right[:percentage]) %></td>
+		</tr>
+		<tr>
+			<th scope="col"> Scapula Depression </th>
+			<td><%= muscle_balance(@assessment.scapula.percent_deviation_scapula_depression_left[:category], @assessment.scapula.percent_deviation_scapula_depression_left[:percentage]) %></td>
+			<td><%= muscle_balance(@assessment.scapula.percent_deviation_scapula_depression_right[:category], @assessment.scapula.percent_deviation_scapula_depression_right[:percentage]) %></td>
+		</tr>
+		<tr>
+			<th scope="col"> </th>
+			<th scope="col"> Left </th>
+			<th scope="col"> Right </th>
+		</tr>
+		<tr>
+			<th scope="col"> Scapula Protraction </th>
+			<td><%= muscle_balance(@assessment.scapula.percent_deviation_scapula_protraction_left[:category], @assessment.scapula.percent_deviation_scapula_protraction_left[:percentage]) %></td>
+			<td><%= muscle_balance(@assessment.scapula.percent_deviation_scapula_protraction_right[:category], @assessment.scapula.percent_deviation_scapula_protraction_right[:percentage]) %></td>
+		</tr>
+		<tr>
+			<th scope="col"> Scapula Retraction </th>
+			<td><%= muscle_balance(@assessment.scapula.percent_deviation_scapula_retraction_left[:category], @assessment.scapula.percent_deviation_scapula_retraction_left[:percentage]) %></td>
+			<td><%= muscle_balance(@assessment.scapula.percent_deviation_scapula_retraction_right[:category], @assessment.scapula.percent_deviation_scapula_retraction_right[:percentage]) %></td>
+		</tr>
+		<tr>
+			<th scope="col"> </th>
+			<th scope="col"> Left </th>
+			<th scope="col"> Right </th>
+		</tr>
+		<tr>
+			<th scope="col"> Scapula Upward Rotation </th>
+			<td><%= muscle_balance(@assessment.scapula.percent_deviation_scapula_upward_rotation_left[:category], @assessment.scapula.percent_deviation_scapula_upward_rotation_left[:percentage]) %></td>
+			<td><%= muscle_balance(@assessment.scapula.percent_deviation_scapula_upward_rotation_right[:category], @assessment.scapula.percent_deviation_scapula_upward_rotation_right[:percentage]) %></td>
+		</tr>
+		<tr>
+			<th scope="col"> Scapula Downward Rotation </th>
+			<td><%= muscle_balance(@assessment.scapula.percent_deviation_scapula_downward_rotation_left[:category], @assessment.scapula.percent_deviation_scapula_downward_rotation_left[:percentage]) %></td>
+			<td><%= muscle_balance(@assessment.scapula.percent_deviation_scapula_downward_rotation_right[:category], @assessment.scapula.percent_deviation_scapula_downward_rotation_right[:percentage]) %></td>
+		</tr>
+
+	</table>
+</div>

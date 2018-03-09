@@ -1,0 +1,114 @@
+<div class="page-break">
+	<h2><center>Elbow</center><hr><h5><i>Deviation of Antagonist Muscles</i></h5></hr></h2>
+	<table class= "table table-bordered">
+		<tr>
+			<th scope="col"> </th>
+			<th scope="col"> Left </th>
+			<th scope="col"> Right </th>
+		</tr>
+		<tr>
+			<th scope="col"> Elbow Flexion Supination</th>
+			<td><%= @assessment.elbow.elbow_flexion_supination_left %></td>
+			<td><%= @assessment.elbow.elbow_flexion_supination_right %></td>
+			<td><%= muscle_balance(@assessment.elbow.flexion_supination_difference[:category], @assessment.elbow.flexion_supination_difference[:percentage]) %></td>
+		</tr>
+		<tr>
+			<th scope="col"> Elbow Extension Supination</th>
+			<td><%= @assessment.elbow.elbow_extension_supination_left %></td>
+			<td><%= @assessment.elbow.elbow_extension_supination_right %></td>
+			<td><%= muscle_balance(@assessment.elbow.extension_supination_difference[:category], @assessment.elbow.extension_supination_difference[:percentage]) %></td>
+		</tr>
+			<td></td>
+			<td><%= muscle_balance(@assessment.elbow.flexion_extension_supination_difference_left[:category], @assessment.elbow.flexion_extension_supination_difference_left[:percentage]) %></td>
+			<td><%= muscle_balance(@assessment.elbow.flexion_extension_supination_difference_right[:category], @assessment.elbow.flexion_extension_supination_difference_right[:percentage]) %></td>
+		<tr>
+			<th scope="col"> </th>
+			<th scope="col"> Left </th>
+			<th scope="col"> Right </th>
+		</tr>
+		<tr>
+			<th scope="col"> Elbow Flexion Neutral</th>
+			<td><%= @assessment.elbow.elbow_flexion_neutral_left %></td>
+			<td><%= @assessment.elbow.elbow_flexion_neutral_right %></td>
+			<td><%= muscle_balance(@assessment.elbow.flexion_neutral_difference[:category], @assessment.elbow.flexion_neutral_difference[:percentage]) %></td>
+		</tr>
+		<tr>
+			<th scope="col"> Elbow Extension Neutral</th>
+			<td><%= @assessment.elbow.elbow_extension_neutral_left %></td>
+			<td><%= @assessment.elbow.elbow_extension_neutral_right %></td>
+			<td><%= muscle_balance(@assessment.elbow.extension_neutral_difference[:category], @assessment.elbow.extension_neutral_difference[:percentage]) %></td>
+		</tr>
+			<td></td>
+			<td><%= muscle_balance(@assessment.elbow.flexion_extension_neutral_difference_left[:category], @assessment.elbow.flexion_extension_neutral_difference_left[:percentage]) %></td>
+			<td><%= muscle_balance(@assessment.elbow.flexion_extension_neutral_difference_right[:category], @assessment.elbow.flexion_extension_neutral_difference_right[:percentage]) %></td>
+		<tr>
+			<th scope="col"> </th>
+			<th scope="col"> Left </th>
+			<th scope="col"> Right </th>
+		</tr>
+		<tr>
+			<th scope="col"> Elbow Flexion Pronation </th>
+			<td><%= @assessment.elbow.elbow_flexion_pronation_left %></td>
+			<td><%= @assessment.elbow.elbow_flexion_pronation_right %></td>
+			<td><%= muscle_balance(@assessment.elbow.flexion_pronation_difference[:category], @assessment.elbow.flexion_pronation_difference[:percentage]) %></td>
+		</tr>
+		<tr>
+			<th scope="col"> Elbow Extension Pronation </th>
+			<td><%= @assessment.elbow.elbow_extension_pronation_left %></td>
+			<td><%= @assessment.elbow.elbow_extension_pronation_right %></td>
+			<td><%= muscle_balance(@assessment.elbow.extension_pronation_difference[:category], @assessment.elbow.extension_pronation_difference[:percentage]) %></td>
+		</tr>
+			<td></td>
+			<td><%= muscle_balance(@assessment.elbow.flexion_extension_pronation_difference_left[:category], @assessment.elbow.flexion_extension_pronation_difference_left[:percentage]) %></td>
+			<td><%= muscle_balance(@assessment.elbow.flexion_extension_pronation_difference_right[:category], @assessment.elbow.flexion_extension_pronation_difference_right[:percentage]) %></td>
+	</table>
+	<br>
+	<h5><i>Deviation of Joint as a Whole</i></h5>
+	<table class= "table table-bordered">
+		<tr>
+			<th scope="col"> </th>
+			<th scope="col"> Left </th>
+			<th scope="col"> Right </th>
+		</tr>
+		<tr>
+			<th scope="col"> Elbow Flexion Supination</th>
+			<td><%= muscle_balance(@assessment.elbow.percent_deviation_elbow_flexion_supination_left[:category], @assessment.elbow.percent_deviation_elbow_flexion_supination_left[:percentage]) %></td>
+			<td><%= muscle_balance(@assessment.elbow.percent_deviation_elbow_flexion_supination_right[:category], @assessment.elbow.percent_deviation_elbow_flexion_supination_right[:percentage]) %></td>
+		</tr>
+		<tr>
+			<th scope="col"> Elbow Extension Supination</th>
+			<td><%= muscle_balance(@assessment.elbow.percent_deviation_elbow_extension_supination_left[:category], @assessment.elbow.percent_deviation_elbow_extension_supination_left[:percentage]) %></td>
+			<td><%= muscle_balance(@assessment.elbow.percent_deviation_elbow_extension_supination_right[:category], @assessment.elbow.percent_deviation_elbow_extension_supination_right[:percentage]) %></td>
+		</tr>
+		<tr>
+			<th scope="col"> </th>
+			<th scope="col"> Left </th>
+			<th scope="col"> Right </th>
+		</tr>
+		<tr>
+			<th scope="col"> Elbow Flexion Neutral</th>
+			<td><%= muscle_balance(@assessment.elbow.percent_deviation_elbow_flexion_neutral_left[:category], @assessment.elbow.percent_deviation_elbow_flexion_neutral_left[:percentage]) %></td>
+			<td><%= muscle_balance(@assessment.elbow.percent_deviation_elbow_flexion_neutral_right[:category], @assessment.elbow.percent_deviation_elbow_flexion_neutral_right[:percentage]) %></td>
+		</tr>
+		<tr>
+			<th scope="col"> Elbow Extension Neutral</th>
+			<td><%= muscle_balance(@assessment.elbow.percent_deviation_elbow_extension_neutral_left[:category], @assessment.elbow.percent_deviation_elbow_extension_neutral_left[:percentage]) %></td>
+			<td><%= muscle_balance(@assessment.elbow.percent_deviation_elbow_extension_neutral_right[:category], @assessment.elbow.percent_deviation_elbow_extension_neutral_right[:percentage]) %></td>
+		</tr>
+		<tr>
+			<th scope="col"> </th>
+			<th scope="col"> Left </th>
+			<th scope="col"> Right </th>
+		</tr>
+		<tr>
+			<th scope="col"> Elbow Flexion Pronation </th>
+			<td><%= muscle_balance(@assessment.elbow.percent_deviation_elbow_flexion_pronation_left[:category], @assessment.elbow.percent_deviation_elbow_flexion_pronation_left[:percentage]) %></td>
+			<td><%= muscle_balance(@assessment.elbow.percent_deviation_elbow_flexion_pronation_right[:category], @assessment.elbow.percent_deviation_elbow_flexion_pronation_right[:percentage]) %></td>
+		</tr>
+		<tr>
+			<th scope="col"> Elbow Extension Pronation </th>
+			<td><%= muscle_balance(@assessment.elbow.percent_deviation_elbow_extension_pronation_left[:category], @assessment.elbow.percent_deviation_elbow_extension_pronation_left[:percentage]) %></td>
+			<td><%= muscle_balance(@assessment.elbow.percent_deviation_elbow_extension_pronation_right[:category], @assessment.elbow.percent_deviation_elbow_extension_pronation_right[:percentage]) %></td>
+		</tr>
+	</table>
+</div>

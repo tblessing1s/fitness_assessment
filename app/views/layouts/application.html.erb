@@ -4,11 +4,22 @@
     <title>FitnessAssessment</title>
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= yield %>
+      <%= render "shared/navbar" %>
+      <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-0 px-4">
+        <div style="padding-top: 20px;">
+          <p class="notice"><%= notice %></p>
+          <p class="alert"><%= alert %></p>
+          <div class="d-print-block">
+            <%= yield %>
+            
+          </div>
+       </div>
+      <%= render "shared/sidebar" %>
+      </main>
   </body>
 </html>

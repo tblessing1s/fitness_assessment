@@ -1,0 +1,48 @@
+<div class="container">
+  <div class="row">
+  	<div class="col">
+<%= f.fields_for :wrist, Wrist.new do |b| %>
+	<p>
+		<%= b.label :wrist_flexion_left %></br>
+		<%= b.number_field :wrist_flexion_left %>
+	</p>
+	<p>
+		<%= b.label :wrist_extension_left %></br>
+		<%= b.number_field :wrist_extension_left %>
+	</p>
+	</div>
+	<div class="col">
+	<p>
+		<%= b.label :wrist_flexion_right %></br>
+		<%= b.number_field :wrist_flexion_right %>
+	</p>				
+	<p>
+		<%= b.label :wrist_extension_right %></br>
+		<%= b.number_field :wrist_extension_right %>
+	</p>
+	</div>
+  </div>
+  <div class="row">
+	<div class="col">
+	<p>
+		<%= b.label :wrist_radial_deviation_left %></br>
+		<%= b.number_field :wrist_radial_deviation_left %>
+	</p>
+	<p>
+		<%= b.label :wrist_ulnar_deviation_left %></br>
+		<%= b.number_field :wrist_ulnar_deviation_left %>
+	</p>
+	</div>
+	<div class="col">
+	<p>
+		<%= b.label :wrist_radial_deviation_right %></br>
+		<%= b.number_field :wrist_radial_deviation_right %>
+	</p>						
+	<p>
+		<%= b.label :wrist_ulnar_deviation_right %></br>
+		<%= b.number_field :wrist_ulnar_deviation_right %>
+	</p>
+<% end %>
+	</div>
+  </div>
+</div>

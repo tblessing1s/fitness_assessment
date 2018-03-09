@@ -1,0 +1,70 @@
+<div class="container">
+  <div class="row">
+  	<div class="col">
+<%= f.fields_for :elbow, Elbow.new do |b| %>
+	<p>
+		<%= b.label :elbow_flexion_supination_left %></br>
+		<%= b.number_field :elbow_flexion_supination_left %>
+	</p>
+	<p>
+		<%= b.label :elbow_extension_supination_left %></br>
+		<%= b.number_field :elbow_extension_supination_left %>
+	</p>
+	</div>
+	<div class="col">
+	<p>
+		<%= b.label :elbow_flexion_supination_right %></br>
+		<%= b.number_field :elbow_flexion_supination_right %>
+	</p>
+	<p>
+		<%= b.label :elbow_extension_supination_right %></br>
+		<%= b.number_field :elbow_extension_supination_right %>
+	</p>				
+	</div>
+  </div>
+  <div class="row">
+	<div class="col">			
+	<p>
+		<%= b.label :elbow_flexion_neutral_left %></br>
+		<%= b.number_field :elbow_flexion_neutral_left %>
+	</p>
+	<p>
+		<%= b.label :elbow_extension_neutral_left %></br>
+		<%= b.number_field :elbow_extension_neutral_left %>
+	</p>
+	</div>
+	<div class="col">
+	<p>
+		<%= b.label :elbow_flexion_neutral_right %></br>
+		<%= b.number_field :elbow_flexion_neutral_right %>
+	</p>
+	<p>
+		<%= b.label :elbow_extension_neutral_right %></br>
+		<%= b.number_field :elbow_extension_neutral_right %>
+	</p>
+	</div>
+  </div>
+  <div class="row">
+	<div class="col">			
+	<p>
+		<%= b.label :elbow_flexion_pronation_left %></br>
+		<%= b.number_field :elbow_flexion_pronation_left %>
+	</p>
+	<p>
+		<%= b.label :elbow_extension_pronation_left %></br>
+		<%= b.number_field :elbow_extension_pronation_left %>
+	</p>
+	</div>
+	<div class="col">
+	<p>
+		<%= b.label :elbow_flexion_pronation_right %></br>
+		<%= b.number_field :elbow_flexion_pronation_right %>
+	</p>
+	<p>
+		<%= b.label :elbow_extension_pronation_right %></br>
+		<%= b.number_field :elbow_extension_pronation_right %>
+	</p>
+	<% end %>
+	</div>
+  </div>
+</div>

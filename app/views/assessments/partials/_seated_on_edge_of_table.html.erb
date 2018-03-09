@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="row">
+  	<div class="col">
+	<%= f.fields_for :knee, Knee.new do |b| %>
+	<p>
+		<%= b.label :knee_extension_left %></br>
+		<%= b.number_field :knee_extension_left %>
+	</p>
+	<% end %>
+	<%= f.fields_for :core, Core.new do |b| %>
+	<p>
+		<%= b.label :trunk_rotation_left %></br>
+		<%= b.number_field :trunk_rotation_left %>
+	</p>
+	<% end %>
+	</div>
+	<div class="col">
+	<%= f.fields_for :knee, Knee.new do |b| %>
+	<p>
+		<%= b.label :knee_extension_right %></br>
+		<%= b.number_field :knee_extension_right %>
+	</p>
+	<% end %>
+	<%= f.fields_for :core, Core.new do |b| %>
+	<p>
+		<%= b.label :trunk_rotation_right %></br>
+		<%= b.number_field :trunk_rotation_right %>
+	</p>
+	<% end %>
+	</div>
+  </div>
+</div>

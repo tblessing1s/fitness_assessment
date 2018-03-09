@@ -1,0 +1,21 @@
+
+    <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0">
+      <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="<%= clients_url %>">TNT Health & Fitness</a>
+      
+      <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search" data-behavior="autocomplete">
+      <ul class="navbar-nav px-3">
+        <li class="nav-item text-nowrap">
+        	<% if trainer_signed_in? %>
+	        	<%= link_to "Sign Out", destroy_trainer_session_path, method: :delete, class: "nav-link" %>
+	        <% else %>
+	        	<div class="row justify-content-end">
+		        	<div class="col-sm-5"><%= link_to "Sign In", new_trainer_session_path, class: "nav-link" %></div>
+		        	<div class="col-sm-6"><%= link_to "Sign Up", new_trainer_registration_path, class: "nav-link" %></div>
+		        </div>
+	        <% end -%>
+        </li>
+      </ul>
+    </nav>
+
+
+  

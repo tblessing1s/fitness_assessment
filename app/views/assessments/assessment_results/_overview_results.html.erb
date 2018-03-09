@@ -1,0 +1,49 @@
+
+  <h2>Overview</h2>
+
+  <script type="text/javascript" src="http://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      chart_image = "";
+    	google.charts.load("current", {packages:['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ["Joint", "Strength", { role: "style" } ], 
+          ["Ankle", <%= @assessment.ankle.overall_average %>, "#ffc2b3"],
+          ["Knee", <%= @assessment.knee.overall_average %>, "#ff9980"],
+          ["Hip", <%= @assessment.hip.overall_average %>, "#ff5c33"],
+          ["Core", <%= @assessment.core.overall_average %>, "#ff3300"],
+          ["Scapula", <%= @assessment.scapula.overall_average %>, "#ff5c33"],
+          ["Shoulder", <%= @assessment.shoulder.overall_average %>, "#ff9980"],
+          ["Elbow", <%= @assessment.elbow.overall_average %>, "#ffc2b3"],
+          ["Wrist", <%= @assessment.wrist.overall_average %>, "#ffebe6"]
+        ]);
+
+        var view = new google.visualization.DataView(data);
+        view.setColumns([0, 1,
+                         { calc: "stringify",
+                           sourceColumn: 1,
+                           type: "string",
+                           role: "annotation" },
+                         2]);
+
+        var options = {
+          title: "Overall Body Joint Function, in newtons(N)",
+          width: 1000,
+          height: 400,
+          bar: {groupWidth: "95%"},
+          legend: { position: "none" },
+          responsive: true
+        };
+
+        var chart_div = document.getElementById("chart_div")
+        var chart = new google.visualization.ColumnChart(chart_div);
+
+
+        chart.draw(view, options);
+    }
+
+    </script>
+
+  <div id="chart_div" style="width: 900px; height: 300px;"></div>

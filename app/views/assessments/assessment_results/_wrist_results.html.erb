@@ -1,0 +1,84 @@
+<div class="page-break">
+	<h2><center>Wrist</center><hr><h5><i>Deviation of Antagonist Muscles</i></h5></hr></h2>
+	<table class= "table table-bordered">
+		<tr>
+			<th scope="col"> </th>
+			<th scope="col"> Left </th>
+			<th scope="col"> Right </th>
+		</tr>
+		<tr>
+			<th scope="col"> Wrist Flexion</th>
+			<td><%= @assessment.wrist.wrist_flexion_left %></td>
+			<td><%= @assessment.wrist.wrist_flexion_right %></td>
+			<td><%= muscle_balance(@assessment.wrist.flexion_difference[:category], @assessment.wrist.flexion_difference[:percentage]) %></td>
+		</tr>
+		<tr>
+			<th scope="col"> Wrist Extension</th>
+			<td><%= @assessment.wrist.wrist_extension_left %></td>
+			<td><%= @assessment.wrist.wrist_extension_right %></td>
+			<td><%= muscle_balance(@assessment.wrist.flexion_difference[:category], @assessment.wrist.flexion_difference[:percentage]) %></td>
+		</tr>
+			<td></td>
+			<td><%= muscle_balance(@assessment.wrist.flexion_extension_difference_left[:category], @assessment.wrist.flexion_extension_difference_left[:percentage]) %></td>
+			<td><%= muscle_balance(@assessment.wrist.flexion_extension_difference_right[:category], @assessment.wrist.flexion_extension_difference_right[:percentage]) %></td>
+		<tr>
+			<th scope="col"> </th>
+			<th scope="col"> Left </th>
+			<th scope="col"> Right </th>
+		</tr>
+		<tr>
+			<th scope="col"> Wrist Radial Deviation</th>
+			<td><%= @assessment.wrist.wrist_radial_deviation_left %></td>
+			<td><%= @assessment.wrist.wrist_radial_deviation_right %></td>
+			<td><%= muscle_balance(@assessment.wrist.radial_deviation_difference[:category], @assessment.wrist.radial_deviation_difference[:percentage]) %></td>
+		</tr>
+		<tr>
+			<th scope="col"> Wrist Ulnar Deviation</th>
+			<td><%= @assessment.wrist.wrist_ulnar_deviation_left %></td>
+			<td><%= @assessment.wrist.wrist_ulnar_deviation_right %></td>
+			<td><%= muscle_balance(@assessment.wrist.ulnar_deviation_difference[:category], @assessment.wrist.ulnar_deviation_difference[:percentage]) %></td>
+		</tr>
+			<td></td>
+			<td><%= muscle_balance(@assessment.wrist.radial_ulnar_deviation_difference_left[:category], @assessment.wrist.radial_ulnar_deviation_difference_left[:percentage]) %></td>
+			<td><%= muscle_balance(@assessment.wrist.radial_ulnar_deviation_difference_right[:category], @assessment.wrist.radial_ulnar_deviation_difference_right[:percentage]) %></td>
+	</table>
+	<br>
+	<h5><i>Deviation of Joint as a Whole</i></h5>
+	<table class= "table table-bordered">
+		<tr>
+			<th scope="col"> </th>
+			<th scope="col"> Left </th>
+			<th scope="col"> Right </th>
+		</tr>
+		<tr>
+			<th scope="col"> Wrist Flexion</th>
+			<td><%= muscle_balance(@assessment.wrist.percent_deviation_wrist_flexion_left[:category], @assessment.wrist.percent_deviation_wrist_flexion_left[:percentage]) %></td>
+			<td><%= muscle_balance(@assessment.wrist.percent_deviation_wrist_flexion_right[:category], @assessment.wrist.percent_deviation_wrist_flexion_right[:percentage]) %></td>
+		</tr>
+		<tr>
+			<th scope="col"> Wrist Extension</th>
+			<td><%= muscle_balance(@assessment.wrist.percent_deviation_wrist_extension_left[:category], @assessment.wrist.percent_deviation_wrist_extension_left[:percentage]) %></td>
+			<td><%= muscle_balance(@assessment.wrist.percent_deviation_wrist_extension_right[:category], @assessment.wrist.percent_deviation_wrist_extension_right[:percentage]) %></td>
+		</tr>
+		<tr>
+			<th scope="col"> </th>
+			<th scope="col"> Left </th>
+			<th scope="col"> Right </th>
+		</tr>
+		<tr>
+			<th scope="col"> Wrist Radial Deviation</th>
+			<td><%= muscle_balance(@assessment.wrist.percent_deviation_wrist_radial_deviation_left[:category], @assessment.wrist.percent_deviation_wrist_radial_deviation_left[:percentage]) %></td>
+			<td><%= muscle_balance(@assessment.wrist.percent_deviation_wrist_radial_deviation_right[:category], @assessment.wrist.percent_deviation_wrist_radial_deviation_right[:percentage]) %></td>
+		</tr>
+		<tr>
+			<th scope="col"> Wrist Ulnar Deviation</th>
+			<td><%= muscle_balance(@assessment.wrist.percent_deviation_wrist_ulnar_deviation_left[:category], @assessment.wrist.percent_deviation_wrist_ulnar_deviation_left[:percentage]) %></td>
+			<td><%= muscle_balance(@assessment.wrist.percent_deviation_wrist_ulnar_deviation_right[:category], @assessment.wrist.percent_deviation_wrist_ulnar_deviation_right[:percentage]) %></td>
+		</tr>
+	</table>
+</div>
+
+
+
+
+

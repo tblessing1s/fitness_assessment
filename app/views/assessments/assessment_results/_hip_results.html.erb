@@ -1,0 +1,158 @@
+<div class="page-break">
+	<h2><center>Hip </center><hr><h5><i>Deviation of Antagonist Muscles</i></h5></hr></h2>
+	<table class= "table table-bordered">
+		<tr>
+			<th scope="col"> </th>
+			<th scope="col"> Left </th>
+			<th scope="col"> Right </th>
+		</tr>
+		<tr>
+			<th scope="col"> Hip Flexion </th>
+			<td><%= @assessment.hip.hip_flexion_left %></td>
+			<td><%= @assessment.hip.hip_flexion_right %></td>
+			<td><%= muscle_balance(@assessment.hip.flexion_difference[:category], @assessment.hip.flexion_difference[:percentage]) %></td>
+		</tr>
+		<tr>
+			<th scope="col"> Hip Extension </th>
+			<td><%= @assessment.hip.hip_extension_left %></td>
+			<td><%= @assessment.hip.hip_extension_right %></td>
+			<td><%= muscle_balance(@assessment.hip.extension_difference[:category], @assessment.hip.extension_difference[:percentage]) %></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><%= muscle_balance(@assessment.hip.flexion_extension_difference_left[:category], @assessment.hip.flexion_extension_difference_left[:percentage]) %></td>
+			<td><%= muscle_balance(@assessment.hip.flexion_extension_difference_right[:category], @assessment.hip.flexion_extension_difference_right[:percentage]) %></td>
+		</tr>
+
+		<tr>
+			<th scope="col"> </th>
+			<th scope="col"> Left </th>
+			<th scope="col"> Right </th>
+		</tr>
+		<tr>
+			<th scope="col"> Hip Abduction </th>
+			<td><%= @assessment.hip.hip_abduction_left %></td>
+			<td><%= @assessment.hip.hip_abduction_right %></td>
+			<td><%= muscle_balance(@assessment.hip.abduction_difference[:category], @assessment.hip.abduction_difference[:percentage]) %></td>
+		</tr>
+		<tr>
+			<th scope="col"> Hip Adduction </th>
+			<td><%= @assessment.hip.hip_adduction_left %></td>
+			<td><%= @assessment.hip.hip_adduction_right %></td>
+			<td><%= muscle_balance(@assessment.hip.adduction_difference[:category], @assessment.hip.adduction_difference[:percentage]) %></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><%= muscle_balance(@assessment.hip.abduction_adduction_difference_left[:category], @assessment.hip.abduction_adduction_difference_left[:percentage]) %></td>
+			<td><%= muscle_balance(@assessment.hip.abduction_adduction_difference_right[:category], @assessment.hip.abduction_adduction_difference_right[:percentage]) %></td>
+		</tr>
+		<tr>
+			<th scope="col"> </th>
+			<th scope="col"> Left </th>
+			<th scope="col"> Right </th>
+		</tr>
+		<tr>
+			<th scope="col">Hip Internal Rotation 90°</th>
+			<td><%= @assessment.hip.hip_internal_rotation_90_left %></td>
+			<td><%= @assessment.hip.hip_internal_rotation_90_right %></td>
+			<td><%= muscle_balance(@assessment.hip.internal_rotation_90_difference[:category], @assessment.hip.internal_rotation_90_difference[:percentage]) %></td>	
+		</tr>
+		<tr>
+			<th scope="col"> Hip External Rotation 90° </th>
+			<td><%= @assessment.hip.hip_external_rotation_90_left %></td>
+			<td><%= @assessment.hip.hip_external_rotation_90_right %></td>
+			<td><%= muscle_balance(@assessment.hip.external_rotation_90_difference[:category], @assessment.hip.external_rotation_90_difference[:percentage]) %></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><%= muscle_balance(@assessment.hip.internal_external_rotation_90_difference_left[:category], @assessment.hip.internal_external_rotation_90_difference_left[:percentage]) %></td>
+			<td><%= muscle_balance(@assessment.hip.internal_external_rotation_90_difference_right[:category], @assessment.hip.internal_external_rotation_90_difference_right[:percentage]) %></td>
+		</tr>
+		<tr>
+			<th scope="col"> </th>
+			<th scope="col"> Left </th>
+			<th scope="col"> Right </th>
+		</tr>
+		<tr>
+			<th scope="col"> Hip Internal Rotation 0° </th>
+			<td><%= @assessment.hip.hip_internal_rotation_0_left %></td>
+			<td><%= @assessment.hip.hip_internal_rotation_0_right %></td>
+			<td><%= muscle_balance(@assessment.hip.internal_rotation_0_difference[:category], @assessment.hip.internal_rotation_0_difference[:percentage]) %></td>
+		</tr>
+		<tr>
+			<th scope="col"> Hip External Rotation 0° </th>
+			<td><%= @assessment.hip.hip_external_rotation_0_left %></td>
+			<td><%= @assessment.hip.hip_external_rotation_0_right %></td>
+			<td><%= muscle_balance(@assessment.hip.external_rotation_0_difference[:category], @assessment.hip.external_rotation_0_difference[:percentage]) %></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><%= muscle_balance(@assessment.hip.internal_external_rotation_0_difference_left[:category], @assessment.hip.internal_external_rotation_0_difference_left[:percentage]) %></td>
+			<td><%= muscle_balance(@assessment.hip.internal_external_rotation_0_difference_right[:category], @assessment.hip.internal_external_rotation_0_difference_right[:percentage]) %></td>
+		</tr>
+	</table>
+	<br>
+		<h5><i>Deviation of Joint as a Whole</i></h5>
+	<table class= "table table-bordered">
+		<tr>
+			<th scope="col"> </th>
+			<th scope="col"> Left </th>
+			<th scope="col"> Right </th>
+		</tr>
+		<tr>
+			<th scope="col"> Hip Flexion </th>
+			<td><%= muscle_balance(@assessment.hip.percent_deviation_hip_flexion_right[:category], @assessment.hip.percent_deviation_hip_flexion_right[:percentage]) %></td>
+			<td><%= muscle_balance(@assessment.hip.percent_deviation_hip_flexion_left[:category], @assessment.hip.percent_deviation_hip_flexion_left[:percentage]) %></td>
+		</tr>
+		<tr>
+			<th scope="col"> Hip Extension </th>
+			<td><%= muscle_balance(@assessment.hip.percent_deviation_hip_extension_left[:category], @assessment.hip.percent_deviation_hip_extension_left[:percentage]) %></td>
+			<td><%= muscle_balance(@assessment.hip.percent_deviation_hip_extension_right[:category], @assessment.hip.percent_deviation_hip_extension_right[:percentage]) %></td>
+		</tr>
+		<tr>
+			<th scope="col"> </th>
+			<th scope="col"> Left </th>
+			<th scope="col"> Right </th>
+		</tr>
+		<tr>
+			<th scope="col"> Hip Abduction </th>
+			<td><%= muscle_balance(@assessment.hip.percent_deviation_hip_abduction_left[:category], @assessment.hip.percent_deviation_hip_abduction_left[:percentage]) %></td>
+			<td><%= muscle_balance(@assessment.hip.percent_deviation_hip_abduction_right[:category], @assessment.hip.percent_deviation_hip_abduction_right[:percentage]) %></td>
+		</tr>
+		<tr>
+			<th scope="col"> Hip Adduction </th>
+			<td><%= muscle_balance(@assessment.hip.percent_deviation_hip_adduction_left[:category], @assessment.hip.percent_deviation_hip_adduction_left[:percentage]) %></td>
+			<td><%= muscle_balance(@assessment.hip.percent_deviation_hip_adduction_right[:category], @assessment.hip.percent_deviation_hip_adduction_right[:percentage]) %></td>
+		</tr>
+		<tr>
+			<th scope="col"> </th>
+			<th scope="col"> Left </th>
+			<th scope="col"> Right </th>
+		</tr>
+		<tr>
+			<th scope="col">Hip Internal Rotation 90°</th>
+			<td><%= muscle_balance(@assessment.hip.percent_deviation_hip_internal_rotation_90_left[:category], @assessment.hip.percent_deviation_hip_internal_rotation_90_left[:percentage]) %></td>
+			<td><%= muscle_balance(@assessment.hip.percent_deviation_hip_internal_rotation_90_right[:category], @assessment.hip.percent_deviation_hip_internal_rotation_90_right[:percentage]) %></td>
+		</tr>
+		<tr>
+			<th scope="col"> Hip External Rotation 90° </th>
+			<td><%= muscle_balance(@assessment.hip.percent_deviation_hip_external_rotation_90_left[:category], @assessment.hip.percent_deviation_hip_external_rotation_90_left[:percentage]) %></td>
+			<td><%= muscle_balance(@assessment.hip.percent_deviation_hip_external_rotation_90_right[:category], @assessment.hip.percent_deviation_hip_external_rotation_90_right[:percentage]) %></td>
+		</tr>
+		<tr>
+			<th scope="col"> </th>
+			<th scope="col"> Left </th>
+			<th scope="col"> Right </th>
+		</tr>
+		<tr>
+			<th scope="col"> Hip Internal Rotation 0° </th>
+			<td><%= muscle_balance(@assessment.hip.percent_deviation_hip_internal_rotation_0_left[:category], @assessment.hip.percent_deviation_hip_internal_rotation_0_left[:percentage]) %></td>
+			<td><%= muscle_balance(@assessment.hip.percent_deviation_hip_internal_rotation_0_right[:category], @assessment.hip.percent_deviation_hip_internal_rotation_0_right[:percentage]) %></td>
+		</tr>
+		<tr>
+			<th scope="col"> Hip External Rotation 0° </th>
+			<td><%= muscle_balance(@assessment.hip.percent_deviation_hip_external_rotation_0_left[:category], @assessment.hip.percent_deviation_hip_external_rotation_0_left[:percentage]) %></td>
+			<td><%= muscle_balance(@assessment.hip.percent_deviation_hip_external_rotation_0_right[:category], @assessment.hip.percent_deviation_hip_external_rotation_0_right[:percentage]) %></td>
+		</tr>
+	</table>
+</div>

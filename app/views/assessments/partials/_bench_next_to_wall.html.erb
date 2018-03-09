@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row">
+  	<div class="col">
+<%= f.fields_for :scapula, Scapula.new do |b| %>
+	<p>
+		<%= b.label :scapula_protraction_left %></br>
+		<%= b.number_field :scapula_protraction_left %>
+	</p>
+	<p>
+		<%= b.label :scapula_retraction_left %></br>
+		<%= b.number_field :scapula_retraction_left %>
+	</p>
+	</div>
+	<div class="col">
+	<p>
+		<%= b.label :scapula_protraction_right %></br>
+		<%= b.number_field :scapula_protraction_right %>
+	</p>
+	<p>
+		<%= b.label :scapula_retraction_right %></br>
+		<%= b.number_field :scapula_retraction_right %>
+	</p>
+<% end %>
+	</div>
+  </div>
+</div>
