@@ -4,21 +4,21 @@
 <%= f.fields_for :elbow, Elbow.new do |b| %>
 	<p>
 		<%= b.label :elbow_flexion_supination_left %></br>
-		<%= b.number_field :elbow_flexion_supination_left %>
+		<%= b.number_field :elbow_flexion_supination_left, required: true, tabindex: 1 %>
 	</p>
 	<p>
 		<%= b.label :elbow_extension_supination_left %></br>
-		<%= b.number_field :elbow_extension_supination_left %>
+		<%= b.number_field :elbow_extension_supination_left, required: true, tabindex: 2 %>
 	</p>
 	</div>
 	<div class="col">
 	<p>
 		<%= b.label :elbow_flexion_supination_right %></br>
-		<%= b.number_field :elbow_flexion_supination_right %>
+		<%= b.number_field :elbow_flexion_supination_right, required: true %>
 	</p>
 	<p>
 		<%= b.label :elbow_extension_supination_right %></br>
-		<%= b.number_field :elbow_extension_supination_right %>
+		<%= b.number_field :elbow_extension_supination_right, required: true %>
 	</p>				
 	</div>
   </div>
@@ -26,21 +26,21 @@
 	<div class="col">			
 	<p>
 		<%= b.label :elbow_flexion_neutral_left %></br>
-		<%= b.number_field :elbow_flexion_neutral_left %>
+		<%= b.number_field :elbow_flexion_neutral_left, required: true, tabindex: 3 %>
 	</p>
 	<p>
 		<%= b.label :elbow_extension_neutral_left %></br>
-		<%= b.number_field :elbow_extension_neutral_left %>
+		<%= b.number_field :elbow_extension_neutral_left, required: true, tabindex: 4 %>
 	</p>
 	</div>
 	<div class="col">
 	<p>
 		<%= b.label :elbow_flexion_neutral_right %></br>
-		<%= b.number_field :elbow_flexion_neutral_right %>
+		<%= b.number_field :elbow_flexion_neutral_right, required: true %>
 	</p>
 	<p>
 		<%= b.label :elbow_extension_neutral_right %></br>
-		<%= b.number_field :elbow_extension_neutral_right %>
+		<%= b.number_field :elbow_extension_neutral_right, required: true %>
 	</p>
 	</div>
   </div>
@@ -48,21 +48,21 @@
 	<div class="col">			
 	<p>
 		<%= b.label :elbow_flexion_pronation_left %></br>
-		<%= b.number_field :elbow_flexion_pronation_left %>
+		<%= b.number_field :elbow_flexion_pronation_left, required: true, tabindex: 5 %>
 	</p>
 	<p>
 		<%= b.label :elbow_extension_pronation_left %></br>
-		<%= b.number_field :elbow_extension_pronation_left %>
+		<%= b.number_field :elbow_extension_pronation_left, required: true, tabindex: 6 %>
 	</p>
 	</div>
 	<div class="col">
 	<p>
 		<%= b.label :elbow_flexion_pronation_right %></br>
-		<%= b.number_field :elbow_flexion_pronation_right %>
+		<%= b.number_field :elbow_flexion_pronation_right, required: true %>
 	</p>
 	<p>
 		<%= b.label :elbow_extension_pronation_right %></br>
-		<%= b.number_field :elbow_extension_pronation_right %>
+		<%= b.number_field :elbow_extension_pronation_right, required: true %>
 	</p>
 	<% end %>
 	</div>

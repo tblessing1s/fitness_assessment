@@ -1,37 +1,47 @@
-
 <div class="center">
-	<h2><%= @assessment.client.name %>'s Assessment</h2>
+	<h2><center><%= @assessment.client.name %>'s Assessment on <%= @assessment.created_at.strftime('%D') %></center></h2>
+	<hr>
 	<p>
 		<%= render 'assessments/assessment_results/overview_results' %></br>
 	</p>
 	<p style="padding-top: 40px;">
-		<%= render 'assessments/assessment_results/knee_results' %>
+		<%= render 'assessments/assessment_results/core_results' %>
 	</p>
-	<p>
+	<p style="padding-top: 40px;">
 		<%= render 'assessments/assessment_results/hip_results' %>
 	</p>
-	<p>
-		<%= render 'assessments/assessment_results/scapula_results' %>
+	<p style="padding-top: 40px;">
+		<%= render 'assessments/assessment_results/knee_results' %>
 	</p>
-	<p>
-		<%= render 'assessments/assessment_results/shoulder_results' %>
-	</p>
-	<p>
-		<%= render 'assessments/assessment_results/elbow_results' %>
-	</p>
-	<p>
-		<%= render 'assessments/assessment_results/wrist_results' %>
-	</p>
-	<p>
+	<p style="padding-top: 40px;">
 		<%= render 'assessments/assessment_results/ankle_results' %>
 	</p>
-	<p>
-		<%= render 'assessments/assessment_results/core_results' %>
+	<p style="padding-top: 40px;">
+		<%= render 'assessments/assessment_results/scapula_results' %>
+	</p>
+	<p style="padding-top: 40px;">
+		<%= render 'assessments/assessment_results/shoulder_results' %>
+	</p>
+	<p style="padding-top: 40px;">
+		<%= render 'assessments/assessment_results/elbow_results' %>
+	</p>
+	<p style="padding-top: 40px;">
+		<%= render 'assessments/assessment_results/wrist_results' %>
 	</p>
 </div>	
 <% content_for :side do %>
 	<a class="nav-link"><%= link_to 'All Clients', clients_path  %></a>
 	<a class="nav-link"><%= link_to "Client's Page", client_path(@assessment.client) %></a>
-	<a class="nav-link"><%= link_to 'Edit Assessment', edit_assessment_path(@assessment) %></a>
 	<a class="nav-link"><%= link_to 'Delete Assessment', assessment_path(@assessment), method: :delete, data: { confirm: 'Are you sure you would like to delete?'} %></a>
+	<hr>
+	<h6>PDF Preview</h6>
+	<p>1)PC: "Ctrl+P" | Mac: "Cmd+P"</p>
+	<p>2)Click "More Settings"</p>
+	<p>3)Set "Scale" to "125"</p>
+	<p>4)Options: Check box for "Background graphics"</p>
+	<p>5) PDF Viewer<br>Click "Open PDF in Preview"</p>
+
+
+
+
 <% end %>

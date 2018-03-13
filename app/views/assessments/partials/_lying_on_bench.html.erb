@@ -4,14 +4,14 @@
 	<%= f.fields_for :scapula, Scapula.new do |b| %>
 	<p>
 		<%= b.label :scapula_depression_left %></br>
-		<%= b.number_field :scapula_depression_left %>
+		<%= b.number_field :scapula_depression_left, required: true, tabindex: 1 %>
 	</p>
 	<% end %>
 
 	<%= f.fields_for :core, Core.new do |b| %>
 	<p>
 		<%= b.label :trunk_lateral_flexion_left %></br>
-		<%= b.number_field :trunk_lateral_flexion_left %>
+		<%= b.number_field :trunk_lateral_flexion_left, required: true, tabindex: 2 %>
 	</p>
 	<% end %>
 	</div>
@@ -19,7 +19,7 @@
 	<%= f.fields_for :scapula, Scapula.new do |b| %>					
 	<p>
 		<%= b.label :scapula_depression_right %></br>
-		<%= b.number_field :scapula_depression_right %>
+		<%= b.number_field :scapula_depression_right, required: true %>
 	</p>
 
 	<% end %>
@@ -27,7 +27,7 @@
 	<%= f.fields_for :core, Core.new do |b| %>
 	<p>
 		<%= b.label :trunk_lateral_flexion_right %></br>
-		<%= b.number_field :trunk_lateral_flexion_right %>
+		<%= b.number_field :trunk_lateral_flexion_right, required: true %>
 	</p>
 	</div>
   </div>
@@ -35,7 +35,7 @@
 	<div class="col">
 	<p>
 		<%= b.label :trunk_flexion %></br>
-		<%= b.number_field :trunk_flexion %>
+		<%= b.number_field :trunk_flexion, required: true, tabindex: 3 %>
 	</p>
 	<% end %>
 	</div>

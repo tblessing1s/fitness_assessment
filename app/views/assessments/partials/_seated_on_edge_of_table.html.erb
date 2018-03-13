@@ -4,13 +4,13 @@
 	<%= f.fields_for :knee, Knee.new do |b| %>
 	<p>
 		<%= b.label :knee_extension_left %></br>
-		<%= b.number_field :knee_extension_left %>
+		<%= b.number_field :knee_extension_left, required: true %>
 	</p>
 	<% end %>
 	<%= f.fields_for :core, Core.new do |b| %>
 	<p>
 		<%= b.label :trunk_rotation_left %></br>
-		<%= b.number_field :trunk_rotation_left %>
+		<%= b.number_field :trunk_rotation_left, required: true %>
 	</p>
 	<% end %>
 	</div>
@@ -18,13 +18,13 @@
 	<%= f.fields_for :knee, Knee.new do |b| %>
 	<p>
 		<%= b.label :knee_extension_right %></br>
-		<%= b.number_field :knee_extension_right %>
+		<%= b.number_field :knee_extension_right, required: true %>
 	</p>
 	<% end %>
 	<%= f.fields_for :core, Core.new do |b| %>
 	<p>
 		<%= b.label :trunk_rotation_right %></br>
-		<%= b.number_field :trunk_rotation_right %>
+		<%= b.number_field :trunk_rotation_right, required: true %>
 	</p>
 	<% end %>
 	</div>

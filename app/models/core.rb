@@ -2,11 +2,11 @@ class Core < ApplicationRecord
   belongs_to :assessment
 
   validates :trunk_lateral_flexion_left, :trunk_lateral_flexion_right, :trunk_rotation_left, :trunk_rotation_right,
-            :trunk_flexion, :trunk_extension, :pelvic_stability,
+            :trunk_flexion, :trunk_extension,
             presence: true
 
   def overall_average
-    ((trunk_lateral_flexion_left + trunk_lateral_flexion_right + trunk_rotation_left + trunk_rotation_right + trunk_flexion + trunk_extension + pelvic_stability)/7)
+    ((trunk_lateral_flexion_left + trunk_lateral_flexion_right + trunk_rotation_left + trunk_rotation_right + trunk_flexion + trunk_extension)/6)
   end
 
   def trunk_lateral_flexion_difference
@@ -45,10 +45,6 @@ class Core < ApplicationRecord
 
   def percent_deviation_trunk_extension
     JointBalanceService.joint_deviation_difference(trunk_extension, overall_average)
-  end
-
-  def percent_deviation_pelvic_stability
-    JointBalanceService.joint_deviation_difference(pelvic_stability, overall_average)
   end
 
 end

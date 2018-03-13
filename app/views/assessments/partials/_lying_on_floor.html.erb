@@ -1,7 +1,7 @@
 <%= f.fields_for :core, Core.new do |b| %>
 	<p>
 		<%= b.label :trunk_extension %></br>
-		<%= b.number_field :trunk_extension %>
+		<%= b.number_field :trunk_extension, required: true %>
 	</p>
 
 <% end %>

@@ -33,10 +33,6 @@
 			<td><%= muscle_balance(@assessment.core.trunk_flexion_extension_difference[:category], @assessment.core.trunk_flexion_extension_difference[:percentage]) %>	
 			</td>
 		</tr>
-		<tr>
-			<th scope="col"> Pelvic Stability</th>
-			<td colspan="2"><%= @assessment.core.pelvic_stability %></td>
-		</tr>
 	</table>
 	<br>
 	<h5><i>Deviation of Joint as a Whole</i></h5>
@@ -65,10 +61,6 @@
 		<tr>
 			<th scope="col"> Trunk Extension</th>
 			<td colspan="2"><%= muscle_balance(@assessment.core.percent_deviation_trunk_extension[:category], @assessment.core.percent_deviation_trunk_extension[:percentage]) %></td>
-		</tr>
-		<tr>
-			<th scope="col"> Pelvic Stability</th>
-			<td colspan="2"><%= muscle_balance(@assessment.core.percent_deviation_pelvic_stability[:category], @assessment.core.percent_deviation_pelvic_stability[:percentage]) %></td>
 		</tr>
 	</table>
 </div>	

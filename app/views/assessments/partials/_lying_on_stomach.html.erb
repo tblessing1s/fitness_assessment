@@ -4,13 +4,7 @@
 	<%= f.fields_for :ankle, Ankle.new do |b| %>
 	<p>
 		<%= b.label :ankle_plantar_flexion_left %></br>
-		<%= b.number_field :ankle_plantar_flexion_left %>
-	</p>
-	<% end %>
-	<%= f.fields_for :hip, Hip.new do |b| %>
-	<p>
-		<%= b.label :hip_internal_rotation_0_left %></br>
-		<%= b.number_field :hip_internal_rotation_0_left %>
+		<%= b.number_field :ankle_plantar_flexion_left, required: true, tabindex: 1 %>
 	</p>
 	<% end %>
 	</div>
@@ -18,36 +12,24 @@
 	<%= f.fields_for :ankle, Ankle.new do |b| %>
 	<p>
 		<%= b.label :ankle_plantar_flexion_right %></br>
-		<%= b.number_field :ankle_plantar_flexion_right %>
+		<%= b.number_field :ankle_plantar_flexion_right, required: true %>
 	</p>
 	<% end %>
 				
 	<%= f.fields_for :hip, Hip.new do |b| %>
-	<p>
-		<%= b.label :hip_internal_rotation_0_right %></br>
-		<%= b.number_field :hip_internal_rotation_0_right %>
-	</p>
 	</div>
   </div>
   <div class="row">
 	<div class="col">
 	<p>
-		<%= b.label :hip_external_rotation_0_left %></br>
-		<%= b.number_field :hip_external_rotation_0_left %>
-	</p>
-	<p>
 		<%= b.label :hip_extension_left %></br>
-		<%= b.number_field :hip_extension_left %>
+		<%= b.number_field :hip_extension_left, required: true, tabindex: 4 %>
 	</p>
 	</div>
 	<div class="col">
 	<p>
-		<%= b.label :hip_external_rotation_0_right %></br>
-		<%= b.number_field :hip_external_rotation_0_right %>
-	</p>
-	<p>
 		<%= b.label :hip_extension_right %></br>
-		<%= b.number_field :hip_extension_right %>
+		<%= b.number_field :hip_extension_right, required: true %>
 	</p>
 	<% end %>
 	</div>
@@ -57,13 +39,13 @@
 	<%= f.fields_for :knee, Knee.new do |b| %>
 	<p>
 		<%= b.label :knee_flexion_left %></br>
-		<%= b.number_field :knee_flexion_left %>
+		<%= b.number_field :knee_flexion_left, required: true, tabindex: 5 %>
 	</p>
 	</div>
 	<div class="col">
 	<p>
 		<%= b.label :knee_flexion_right %></br>
-		<%= b.number_field :knee_flexion_right %>
+		<%= b.number_field :knee_flexion_right, required: true %>
 	</p>
 	<% end %>
 	</div>

@@ -1,23 +1,22 @@
 
   <h2>Overview</h2>
 
-  <script type="text/javascript" src="http://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
-      chart_image = "";
-    	google.charts.load("current", {packages:['corechart']});
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <center><script type="text/javascript">
+    
+      google.charts.load("current", {packages:['corechart']});
       google.charts.setOnLoadCallback(drawChart);
-
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
-          ["Joint", "Strength", { role: "style" } ], 
-          ["Ankle", <%= @assessment.ankle.overall_average %>, "#ffc2b3"],
-          ["Knee", <%= @assessment.knee.overall_average %>, "#ff9980"],
-          ["Hip", <%= @assessment.hip.overall_average %>, "#ff5c33"],
-          ["Core", <%= @assessment.core.overall_average %>, "#ff3300"],
-          ["Scapula", <%= @assessment.scapula.overall_average %>, "#ff5c33"],
-          ["Shoulder", <%= @assessment.shoulder.overall_average %>, "#ff9980"],
-          ["Elbow", <%= @assessment.elbow.overall_average %>, "#ffc2b3"],
-          ["Wrist", <%= @assessment.wrist.overall_average %>, "#ffebe6"]
+            ["Joint", "Strength", { role: "style" } ], 
+            ["Ankle", <%= @assessment.ankle.overall_average %>, "#0000ff"],
+            ["Knee", <%= @assessment.knee.overall_average %>, "#0000ff"],
+            ["Hip", <%= @assessment.hip.overall_average %>, "#0000ff"],
+            ["Core", <%= @assessment.core.overall_average %>, "#0000ff"],
+            ["Scapula", <%= @assessment.scapula.overall_average %>, "#0000ff"],
+            ["Shoulder", <%= @assessment.shoulder.overall_average %>, "#0000ff"],
+            ["Elbow", <%= @assessment.elbow.overall_average %>, "#0000ff"],
+            ["Wrist", <%= @assessment.wrist.overall_average %>, "#0000ff"]
         ]);
 
         var view = new google.visualization.DataView(data);
@@ -29,21 +28,17 @@
                          2]);
 
         var options = {
-          title: "Overall Body Joint Function, in newtons(N)",
-          width: 1000,
-          height: 400,
-          bar: {groupWidth: "95%"},
-          legend: { position: "none" },
-          responsive: true
+            title: "Overall Body Joint Function, in newtons(N)",
+            vAxes: {
+              0: {baseline: 0}
+            },
+            width: 1000,
+            height: 400,
+            bar: {groupWidth: "95%"},
+            legend: { position: "none" },
         };
-
-        var chart_div = document.getElementById("chart_div")
-        var chart = new google.visualization.ColumnChart(chart_div);
-
-
+        var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values"));
         chart.draw(view, options);
     }
-
-    </script>
-
-  <div id="chart_div" style="width: 900px; height: 300px;"></div>
+  </script></center>
+<div id="columnchart_values" style="width: 900px; height: 300px;"></div>
