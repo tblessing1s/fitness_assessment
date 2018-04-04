@@ -1,51 +1,51 @@
 <div class="container">
   <div class="row">
   	<div class="col">	
-	<%= f.fields_for :ankle, Ankle.new do |b| %>
+	<%= f.fields_for :ankle do |b| %>
 	<p>
 		<%= b.label :ankle_plantar_flexion_left %></br>
-		<%= b.number_field :ankle_plantar_flexion_left, required: true, tabindex: 1 %>
+		<%= b.number_field :ankle_plantar_flexion_left, tabindex: 1, required: true, class: "form-control" %>
 	</p>
 	<% end %>
 	</div>
 	<div class="col">
-	<%= f.fields_for :ankle, Ankle.new do |b| %>
+	<%= f.fields_for :ankle do |b| %>
 	<p>
 		<%= b.label :ankle_plantar_flexion_right %></br>
-		<%= b.number_field :ankle_plantar_flexion_right, required: true %>
+		<%= b.number_field :ankle_plantar_flexion_right, required: true, class: "form-control" %>
 	</p>
 	<% end %>
 				
-	<%= f.fields_for :hip, Hip.new do |b| %>
+	<%= f.fields_for :hip do |b| %>
 	</div>
   </div>
   <div class="row">
 	<div class="col">
 	<p>
 		<%= b.label :hip_extension_left %></br>
-		<%= b.number_field :hip_extension_left, required: true, tabindex: 4 %>
+		<%= b.number_field :hip_extension_left, tabindex: 4, required: true, class: "form-control" %>
 	</p>
 	</div>
 	<div class="col">
 	<p>
 		<%= b.label :hip_extension_right %></br>
-		<%= b.number_field :hip_extension_right, required: true %>
+		<%= b.number_field :hip_extension_right, required: true, class: "form-control" %>
 	</p>
 	<% end %>
 	</div>
   </div>
   <div class="row">
 	<div class="col">
-	<%= f.fields_for :knee, Knee.new do |b| %>
+	<%= f.fields_for :knee do |b| %>
 	<p>
 		<%= b.label :knee_flexion_left %></br>
-		<%= b.number_field :knee_flexion_left, required: true, tabindex: 5 %>
+		<%= b.number_field :knee_flexion_left, tabindex: 5, required: true, class: "form-control" %>
 	</p>
 	</div>
 	<div class="col">
 	<p>
 		<%= b.label :knee_flexion_right %></br>
-		<%= b.number_field :knee_flexion_right, required: true %>
+		<%= b.number_field :knee_flexion_right, required: true, class: "form-control" %>
 	</p>
 	<% end %>
 	</div>

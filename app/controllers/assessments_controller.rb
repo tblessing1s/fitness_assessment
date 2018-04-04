@@ -16,6 +16,14 @@ class AssessmentsController < ApplicationController
 
 	def new
 		@assessment = Assessment.new
+		@assessment.scapula = Scapula.new
+		@assessment.shoulder = Shoulder.new
+		@assessment.knee = Knee.new
+		@assessment.hip = Hip.new
+		@assessment.elbow = Elbow.new
+		@assessment.wrist = Wrist.new
+		@assessment.ankle = Ankle.new
+		@assessment.core = Core.new
 	end
 
 	def create

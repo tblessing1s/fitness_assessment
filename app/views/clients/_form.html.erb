@@ -1,25 +1,44 @@
-<%= form_for(@client) do |f| %>
+<%= form_for @client, html: { class: "needs-validation was-validated", novalidate: 'novalidate'} do |f| %>
+	<% if @client.errors.any? %>
+	  <section id="errors">
+	  	<div class="alert alert-danger" role="alert">
+	    <header>
+	      <h2>
+	        Oops! The <%= @client.class.name.titleize.downcase %> could not be saved. 
+	      </h2>
+	      <h3>
+	        Please correct the following <%= pluralize(@client.errors.count, "error") %>:
+	      </h3>
+	    </header>
+	    <ul>
+	      <% @client.errors.full_messages.each do |message| %>
+	        <li><%= message %></li>
+	      <% end %>
+	    </ul>
+	  </div>
+	  </section>
+	<% end %>
 	<p>
 		<%= f.label :name %></br>
-		<%= f.text_field :name %>
+		<%= f.text_field :name, required: true, class: "form-control col-6" %>
 	</p>
 	<p>
 		<%= f.label :email %></br>
-		<%= f.text_field :email %>
+		<%= f.text_field :email, required: true, class: "form-control col-6" %>
 	</p>
 	<p>
 		<%= f.label :phone %></br>
-		<%= f.text_field :phone %>
+		<%= f.text_field :phone, required: true, class: "form-control col-6" %>
 	</p>
 	<p>
 		<%= f.label :date_of_birth %></br>
-		<%= f.text_field :date_of_birth %>
+		<%= f.text_field :date_of_birth, required: true, class: "form-control col-6" %>
 	</p>
 	<p>
 		<%= f.label :home_address %></br>
-		<%= f.text_field :home_address %>
+		<%= f.text_field :home_address, required: true, class: "form-control col-6" %>
 	</p>			
-	<p>
-		<%= f.submit %>
+	<p style="margin-top: 40px;">
+		<%= f.submit "Create New Client", class: "btn btn-primary btn-lg" %>
 	</p>
 <% end %>

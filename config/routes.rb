@@ -13,6 +13,6 @@ root "clients#index"
 	end
 
 	resources :assessments, only: [:new, :create, :show, :edit, :update, :destroy]
-  get "/assessments" => "clients#index"
 	
+  get "assessments" => "clients#index"
 end
