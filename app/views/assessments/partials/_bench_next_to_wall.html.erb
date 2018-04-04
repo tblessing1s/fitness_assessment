@@ -1,24 +1,24 @@
 <div class="container">
   <div class="row">
   	<div class="col">
-<%= f.fields_for :scapula, Scapula.new do |b| %>
+<%= f.fields_for :scapula do |b| %>
 	<p>
 		<%= b.label :scapula_protraction_left %></br>
-		<%= b.number_field :scapula_protraction_left, required: true %>
+		<%= b.number_field :scapula_protraction_left, required: true, class: "form-control" %>
 	</p>
 	<p>
 		<%= b.label :scapula_retraction_left %></br>
-		<%= b.number_field :scapula_retraction_left, required: true %>
+		<%= b.number_field :scapula_retraction_left, required: true, class: "form-control" %>
 	</p>
 	</div>
 	<div class="col">
 	<p>
 		<%= b.label :scapula_protraction_right %></br>
-		<%= b.number_field :scapula_protraction_right, required: true %>
+		<%= b.number_field :scapula_protraction_right, required: true, class: "form-control" %>
 	</p>
 	<p>
 		<%= b.label :scapula_retraction_right %></br>
-		<%= b.number_field :scapula_retraction_right, required: true %>
+		<%= b.number_field :scapula_retraction_right, required: true, class: "form-control" %>
 	</p>
 <% end %>
 	</div>

@@ -1,48 +1,49 @@
 <div class="container">
   <div class="row">
   	<div class="col">
-	<%= f.fields_for :scapula, Scapula.new do |b| %>
-		<p>	
-			<%= b.label :scapula_upward_rotation_left %> </br>
-			<%= b.number_field :scapula_upward_rotation_left, required: true, tabindex: 1 %>
-		</p>
-		<p>
-			<%= b.label :scapula_downward_rotation_left %></br>
-			<%= b.number_field :scapula_downward_rotation_left, required: true, tabindex: 2 %>
-		</p>
-	</div>
-	<div class="col">
-		<p>
-			<%= b.label :scapula_upward_rotation_right %></br>
-			<%= b.number_field :scapula_upward_rotation_right, required: true, tabindex: 21 %>
-		</p>
-		<p>
-			<%= b.label :scapula_downward_rotation_right %></br>
-			<%= b.number_field :scapula_downward_rotation_right, required: true %>
-		</p>
-	<% end %>
+  	<%= f.fields_for :scapula do |b| %>
+    <p> 
+      <%= b.label :scapula_upward_rotation_left %> </br>
+      <%= b.number_field :scapula_upward_rotation_left, required: true, tabindex: 1, class: "form-control" %>
+    </p>
+    <p>
+      <%= b.label :scapula_downward_rotation_left %></br>
+      <%= b.number_field :scapula_downward_rotation_left, required: true, tabindex: 2, class: "form-control" %>
+    </p>
+  </div>
+  <div class="col">
+    <p>
+      <%= b.label :scapula_upward_rotation_right %></br>
+      <%= b.number_field :scapula_upward_rotation_right, required: true, tabindex: 21, class: "form-control" %>
+    </p>
+    <p>
+      <%= b.label :scapula_downward_rotation_right %></br>
+      <%= b.number_field :scapula_downward_rotation_right, required: true, class: "form-control" %>
+    </p>
+
+    <% end %>
 	</div>
   </div>
   <div class="row">
 	<div class="col">
-	<%= f.fields_for :shoulder, Shoulder.new do |b| %>
+	<%= f.fields_for :shoulder do |b| %>
 	<p>
 		<%= b.label :shoulder_flexion_left %></br>
-		<%= b.number_field :shoulder_flexion_left, required: true, tabindex: 3 %>
+		<%= b.number_field :shoulder_flexion_left, tabindex: 3, required: true, class: "form-control" %>
 	</p>
 	<p>
 		<%= b.label :shoulder_extension_left %></br>
-		<%= b.number_field :shoulder_extension_left, required: true, tabindex: 4 %>
+		<%= b.number_field :shoulder_extension_left, tabindex: 4, required: true, class: "form-control" %>
 	</p>
 	</div>
 	<div class="col">
 	<p>
 		<%= b.label :shoulder_flexion_right %></br>
-		<%= b.number_field :shoulder_flexion_right, required: true %>
+		<%= b.number_field :shoulder_flexion_right, required: true, class: "form-control" %>
 	</p>
 	<p>
 		<%= b.label :shoulder_extension_right %></br>
-		<%= b.number_field :shoulder_extension_right, required: true %>
+		<%= b.number_field :shoulder_extension_right, required: true, class: "form-control" %>
 	</p>
 	</div>
   </div>
@@ -50,21 +51,21 @@
 	<div class="col">
 	<p>
 		<%= b.label :shoulder_abduction_left %></br>
-		<%= b.number_field :shoulder_abduction_left, required: true, tabindex: 5 %>
+		<%= b.number_field :shoulder_abduction_left, required: true, class: "form-control", tabindex: 5 %>
 	</p>
 	<p>
 		<%= b.label :shoulder_adduction_left %></br>
-		<%= b.number_field :shoulder_adduction_left, required: true, tabindex: 6 %>
+		<%= b.number_field :shoulder_adduction_left, required: true, class: "form-control", tabindex: 6 %>
 	</p>
 	</div>
 	<div class="col">
 	<p>
 		<%= b.label :shoulder_abduction_right %></br>
-		<%= b.number_field :shoulder_abduction_right, required: true %>
+		<%= b.number_field :shoulder_abduction_right, required: true, class: "form-control" %>
 	</p>
 	<p>
 		<%= b.label :shoulder_adduction_right %></br>
-		<%= b.number_field :shoulder_adduction_right, required: true %>
+		<%= b.number_field :shoulder_adduction_right, required: true, class: "form-control" %>
 	</p>
 	</div>
   </div>
@@ -72,21 +73,21 @@
 	<div class="col">
 	<p>
 		<%= b.label :shoulder_internal_rotation_left %></br>
-		<%= b.number_field :shoulder_internal_rotation_left, required: true, tabindex: 7 %>
+		<%= b.number_field :shoulder_internal_rotation_left, required: true, class: "form-control", tabindex: 7 %>
 	</p>
 	<p>
 		<%= b.label :shoulder_external_rotation_left %></br>
-		<%= b.number_field :shoulder_external_rotation_left, required: true, tabindex: 8 %>
+		<%= b.number_field :shoulder_external_rotation_left, tabindex: 8, required: true, class: "form-control" %>
 	</p>
 	</div>
 	<div class="col">
 	<p>
 		<%= b.label :shoulder_internal_rotation_right %></br>
-		<%= b.number_field :shoulder_internal_rotation_right, required: true %>
+		<%= b.number_field :shoulder_internal_rotation_right, required: true, class: "form-control" %>
 	</p>
 	<p>
 		<%= b.label :shoulder_external_rotation_right %></br>
-		<%= b.number_field :shoulder_external_rotation_right, required: true %>
+		<%= b.number_field :shoulder_external_rotation_right, required: true, class: "form-control" %>
 	</p>
 	</div>
   </div>
@@ -94,45 +95,45 @@
 	<div class="col">
 	<p>
 		<%= b.label :shoulder_horizontal_abduction_left %></br>
-		<%= b.number_field :shoulder_horizontal_abduction_left, required: true, tabindex: 9 %>
+		<%= b.number_field :shoulder_horizontal_abduction_left, tabindex: 9, required: true, class: "form-control" %>
 	</p>
 	<p>
 		<%= b.label :shoulder_horizontal_adduction_left %></br>
-		<%= b.number_field :shoulder_horizontal_adduction_left, required: true, tabindex: 10 %>
+		<%= b.number_field :shoulder_horizontal_adduction_left, tabindex: 10, required: true, class: "form-control" %>
 	</p>
 	</div>
 	<div class="col">
 	<p>
 		<%= b.label :shoulder_horizontal_abduction_right %></br>
-		<%= b.number_field :shoulder_horizontal_abduction_right, required: true %>
+		<%= b.number_field :shoulder_horizontal_abduction_right, required: true, class: "form-control" %>
 	</p>
 	<p>
 		<%= b.label :shoulder_horizontal_adduction_right %></br>
-		<%= b.number_field :shoulder_horizontal_adduction_right, required: true %>
+		<%= b.number_field :shoulder_horizontal_adduction_right, required: true, class: "form-control" %>
 	</p>
 	<% end %>
 	</div>
   </div>
   <div class="row">
 	<div class="col">
-	<%= f.fields_for :hip, Hip.new do |b| %>
+	<%= f.fields_for :hip do |b| %>
 	<p>
 		<%= b.label :hip_flexion_left %></br>
-		<%= b.number_field :hip_flexion_left, required: true, tabindex: 11 %>
+		<%= b.number_field :hip_flexion_left, tabindex: 11, required: true, class: "form-control" %>
 	</p>
 	<p>
 		<%= b.label :hip_internal_rotation_90_left %></br>
-		<%= b.number_field :hip_internal_rotation_90_left, required: true, tabindex: 12 %>
+		<%= b.number_field :hip_internal_rotation_90_left, tabindex: 12, required: true, class: "form-control" %>
 	</p>
 	</div>
 	<div class="col">
 	<p>
 		<%= b.label :hip_flexion_right %></br>
-		<%= b.number_field :hip_flexion_right, required: true %>
+		<%= b.number_field :hip_flexion_right, required: true, class: "form-control" %>
 	</p>
 	<p>
 		<%= b.label :hip_internal_rotation_90_right %></br>
-		<%= b.number_field :hip_internal_rotation_90_right, required: true %>
+		<%= b.number_field :hip_internal_rotation_90_right, required: true, class: "form-control" %>
 	</p>
 	</div>
   </div>
@@ -140,21 +141,21 @@
 	<div class="col">
 	<p>
 		<%= b.label :hip_external_rotation_90_left %></br>
-		<%= b.number_field :hip_external_rotation_90_left, required: true, tabindex: 13 %>
+		<%= b.number_field :hip_external_rotation_90_left, tabindex: 13, required: true, class: "form-control" %>
 	</p>
 	<p>
 		<%= b.label :hip_abduction_left %></br>
-		<%= b.number_field :hip_abduction_left, required: true, tabindex: 14 %>
+		<%= b.number_field :hip_abduction_left, tabindex: 14, required: true, class: "form-control" %>
 	</p>
 	</div>
 	<div class="col">
 	<p>
 		<%= b.label :hip_external_rotation_90_right %></br>
-		<%= b.number_field :hip_external_rotation_90_right, required: true %>
+		<%= b.number_field :hip_external_rotation_90_right, required: true, class: "form-control" %>
 	</p>
 	<p>
 		<%= b.label :hip_abduction_right %></br>
-		<%= b.number_field :hip_abduction_right, required: true %>
+		<%= b.number_field :hip_abduction_right, required: true, class: "form-control" %>
 	</p>
 	</div>
   </div>
@@ -162,29 +163,29 @@
 	<div class="col">
 	<p>
 		<%= b.label :hip_adduction_left %></br>
-		<%= b.number_field :hip_adduction_left, required: true, tabindex: 15 %>
+		<%= b.number_field :hip_adduction_left, tabindex: 15, required: true, class: "form-control" %>
 	</p>
 	<% end %>
 
-	<%= f.fields_for :ankle, Ankle.new do |b| %>
+	<%= f.fields_for :ankle do |b| %>
 	<p>
 		<%= b.label :ankle_dorsiflexion_left %></br>
-		<%= b.number_field :ankle_dorsiflexion_left, required: true, tabindex: 16 %>
+		<%= b.number_field :ankle_dorsiflexion_left, tabindex: 16, required: true, class: "form-control" %>
 	</p>
 	<% end %>
 	</div>
 	<div class="col">
-	<%= f.fields_for :hip, Hip.new do |b| %>
+	<%= f.fields_for :hip do |b| %>
 	<p>
 		<%= b.label :hip_adduction_right %></br>
-		<%= b.number_field :hip_adduction_right, required: true %>
+		<%= b.number_field :hip_adduction_right, required: true, class: "form-control" %>
 	</p>
 	<% end %>
 
-	<%= f.fields_for :ankle, Ankle.new do |b| %>
+	<%= f.fields_for :ankle do |b| %>
 	<p>
 		<%= b.label :ankle_dorsiflexion_right %></br>
-		<%= b.number_field :ankle_dorsiflexion_right, required: true %>
+		<%= b.number_field :ankle_dorsiflexion_right, required: true, class: "form-control" %>
 	</p>
 	</div>
   </div>
@@ -192,39 +193,39 @@
 	<div class="col">
 	<p>
 		<%= b.label :ankle_inversion_left %></br>
-		<%= b.number_field :ankle_inversion_left, required: true, tabindex: 17 %>
+		<%= b.number_field :ankle_inversion_left, tabindex: 17, required: true, class: "form-control" %>
 	</p>
 	<p>
 		<%= b.label :ankle_eversion_left %></br>
-		<%= b.number_field :ankle_eversion_left, required: true, tabindex: 18 %>
+		<%= b.number_field :ankle_eversion_left, tabindex: 18, required: true, class: "form-control" %>
 	</p>
 	</div>
 	<div class="col">
 	<p>
 		<%= b.label :ankle_inversion_right %></br>
-		<%= b.number_field :ankle_inversion_right, required: true %>
+		<%= b.number_field :ankle_inversion_right, required: true, class: "form-control" %>
 	</p>
 	<p>
 		<%= b.label :ankle_eversion_right %></br>
-		<%= b.number_field :ankle_eversion_right, required: true %>
+		<%= b.number_field :ankle_eversion_right, required: true, class: "form-control" %>
 	</p>
 	<% end %>
 	</div>
   </div>
   <div class="row">
 	<div class="col">
-	<%= f.fields_for :scapula, Scapula.new do |b| %>
+	<%= f.fields_for :scapula do |b| %>
 	<p>
 		<%= b.label :scapula_elevation_left %></br>
-		<%= b.number_field :scapula_elevation_left, required: true, tabindex: 19 %>
+		<%= b.number_field :scapula_elevation_left, tabindex: 19, required: true, class: "form-control" %>
 	</p>
 	<% end %>
 	</div>
 	<div class="col">
-	<%= f.fields_for :scapula, Scapula.new do |b| %>
+	<%= f.fields_for :scapula do |b| %>
 	<p>
 		<%= b.label :scapula_elevation_right %></br>
-		<%= b.number_field :scapula_elevation_right, required: true %>
+		<%= b.number_field :scapula_elevation_right, required: true, class: "form-control" %>
 	</p>
 	<% end %>
 	</div>
