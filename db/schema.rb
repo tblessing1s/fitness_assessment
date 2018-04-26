@@ -31,10 +31,7 @@ ActiveRecord::Schema.define(version: 20180226154907) do
     t.integer  "client_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer  "knee_id"
-    t.text     "image"
     t.index ["client_id"], name: "index_assessments_on_client_id"
-    t.index ["knee_id"], name: "index_assessments_on_knee_id"
   end
 
   create_table "clients", force: :cascade do |t|
