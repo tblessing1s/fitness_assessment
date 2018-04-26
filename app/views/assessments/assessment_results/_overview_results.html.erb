@@ -5,8 +5,11 @@
   <center><script type="text/javascript">
     
       google.charts.load("current", {packages:['corechart']});
-      google.charts.setOnLoadCallback(drawChart);
-      function drawChart() {
+      
+      google.charts.setOnLoadCallback(drawClientsChart);
+      google.charts.setOnLoadCallback(drawExampleChart);
+      
+      function drawClientsChart() {
         var data = google.visualization.arrayToDataTable([
             ["Joint", "Strength", { role: "style" } ], 
             ["Ankle", <%= @assessment.ankle.overall_average %>, "#0000ff"],
@@ -37,8 +40,44 @@
             bar: {groupWidth: "95%"},
             legend: { position: "none" },
         };
-        var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values"));
+        var chart = new google.visualization.ColumnChart(document.getElementById("Client_chart_div"));
         chart.draw(view, options);
     }
+
+    function drawExampleChart() {
+      var data = google.visualization.arrayToDataTable([
+            ["Joint", "Strength", { role: "style" }], 
+            ["Ankle", 400, "#0000ff"],
+            ["Knee", 600, "#0000ff"],
+            ["Hip", 800, "#0000ff"],
+            ["Core", 1000, "#0000ff"],
+            ["Scapula", 800, "#0000ff"],
+            ["Shoulder", 600, "#0000ff"],
+            ["Elbow", 400, "#0000ff"],
+            ["Wrist", 200, "#0000ff"]
+        ]);
+
+      var view = new google.visualization.DataView(data);
+        view.setColumns([0, 1,
+                         { calc: "stringify",
+                           sourceColumn: 1,
+                           type: "string",
+                           role: "annotation" },
+                         2]);
+      
+      var options = {
+            title: "Example of balanced body",
+            vAxes: {
+              0: {baseline: 0}
+            },
+            width: 1000,
+            height: 400,
+            bar: {groupWidth: "95%"},
+            legend: { position: "none" },
+        };
+      var chart = new google.visualization.ColumnChart(document.getElementById("Example_chart_div"));
+      chart.draw(view, options);
+    }
   </script></center>
-<div id="columnchart_values" style="width: 900px; height: 300px;"></div>
+<div id="Client_chart_div" style="width: 900px; height: 300px;"></div></br>
+<div id="Example_chart_div" style="width: 900px; height: 300px; margin-top: 80px; margin-bottom: 80px;"></div></br>

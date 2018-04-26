@@ -1,7 +1,13 @@
-<%= f.fields_for :core, Core.new do |b| %>
-	<p>
-		<%= b.label :trunk_extension %></br>
-		<%= b.number_field :trunk_extension, required: true %>
-	</p>
+<div class="container">
+  <div class="row">
+  	<div class="col">
+		<%= f.fields_for :core do |b| %>
+			<p>
+				<%= b.label :trunk_extension %></br>
+				<%= b.number_field :trunk_extension, required: true, class: "form-control" %>
+			</p>
 
-<% end %>
+		<% end %>
+	</div>
+</div>
+</div>

@@ -1,24 +1,24 @@
 <div class="container">
   <div class="row">
   	<div class="col">
-<%= f.fields_for :wrist, Wrist.new do |b| %>
+<%= f.fields_for :wrist do |b| %>
 	<p>
 		<%= b.label :wrist_flexion_left %></br>
-		<%= b.number_field :wrist_flexion_left, required: true, tabindex: 1 %>
+		<%= b.number_field :wrist_flexion_left, tabindex: 1, required: true, class: "form-control" %>
 	</p>
 	<p>
 		<%= b.label :wrist_extension_left %></br>
-		<%= b.number_field :wrist_extension_left, required: true, tabindex: 2 %>
+		<%= b.number_field :wrist_extension_left, tabindex: 2, required: true, class: "form-control" %>
 	</p>
 	</div>
 	<div class="col">
 	<p>
 		<%= b.label :wrist_flexion_right %></br>
-		<%= b.number_field :wrist_flexion_right, required: true %>
+		<%= b.number_field :wrist_flexion_right, required: true, class: "form-control" %>
 	</p>				
 	<p>
 		<%= b.label :wrist_extension_right %></br>
-		<%= b.number_field :wrist_extension_right, required: true %>
+		<%= b.number_field :wrist_extension_right, required: true, class: "form-control" %>
 	</p>
 	</div>
   </div>
@@ -26,21 +26,21 @@
 	<div class="col">
 	<p>
 		<%= b.label :wrist_radial_deviation_left %></br>
-		<%= b.number_field :wrist_radial_deviation_left, required: true, tabindex: 3 %>
+		<%= b.number_field :wrist_radial_deviation_left, tabindex: 3, required: true, class: "form-control" %>
 	</p>
 	<p>
 		<%= b.label :wrist_ulnar_deviation_left %></br>
-		<%= b.number_field :wrist_ulnar_deviation_left, required: true, tabindex: 4 %>
+		<%= b.number_field :wrist_ulnar_deviation_left, tabindex: 4, required: true, class: "form-control" %>
 	</p>
 	</div>
 	<div class="col">
 	<p>
 		<%= b.label :wrist_radial_deviation_right %></br>
-		<%= b.number_field :wrist_radial_deviation_right, required: true %>
+		<%= b.number_field :wrist_radial_deviation_right, required: true, class: "form-control" %>
 	</p>						
 	<p>
 		<%= b.label :wrist_ulnar_deviation_right %></br>
-		<%= b.number_field :wrist_ulnar_deviation_right, required: true %>
+		<%= b.number_field :wrist_ulnar_deviation_right, required: true, class: "form-control" %>
 	</p>
 <% end %>
 	</div>

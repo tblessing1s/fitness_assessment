@@ -1,30 +1,30 @@
 <div class="container">
   <div class="row">
   	<div class="col">
-	<%= f.fields_for :knee, Knee.new do |b| %>
+	<%= f.fields_for :knee do |b| %>
 	<p>
 		<%= b.label :knee_extension_left %></br>
-		<%= b.number_field :knee_extension_left, required: true %>
+		<%= b.number_field :knee_extension_left, required: true, class: "form-control" %>
 	</p>
 	<% end %>
-	<%= f.fields_for :core, Core.new do |b| %>
+	<%= f.fields_for :core do |b| %>
 	<p>
 		<%= b.label :trunk_rotation_left %></br>
-		<%= b.number_field :trunk_rotation_left, required: true %>
+		<%= b.number_field :trunk_rotation_left, required: true, class: "form-control" %>
 	</p>
 	<% end %>
 	</div>
 	<div class="col">
-	<%= f.fields_for :knee, Knee.new do |b| %>
+	<%= f.fields_for :knee do |b| %>
 	<p>
 		<%= b.label :knee_extension_right %></br>
-		<%= b.number_field :knee_extension_right, required: true %>
+		<%= b.number_field :knee_extension_right, required: true, class: "form-control" %>
 	</p>
 	<% end %>
-	<%= f.fields_for :core, Core.new do |b| %>
+	<%= f.fields_for :core do |b| %>
 	<p>
 		<%= b.label :trunk_rotation_right %></br>
-		<%= b.number_field :trunk_rotation_right, required: true %>
+		<%= b.number_field :trunk_rotation_right, required: true, class: "form-control" %>
 	</p>
 	<% end %>
 	</div>
