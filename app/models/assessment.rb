@@ -12,6 +12,8 @@ class Assessment < ApplicationRecord
   accepts_nested_attributes_for :knee, :hip, :shoulder, :scapula, :elbow, :wrist, :ankle, :core
 
  	scope :client_assessments, -> (client){where(client_id: client).order('created_at desc')}
-  scope :most_recent, -> (client){where(client_id: client).order('created_at asc').group(:client_id)}
+  scope :most_recent, -> (client){}
+  #scope :most_recent, -> (client){select(client_id: client, created_at: client).order('created_at asc').group(:client_id, :created_at)}
+  
 
 end

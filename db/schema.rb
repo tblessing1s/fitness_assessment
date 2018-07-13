@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 20180226154907) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "ankles", force: :cascade do |t|
     t.integer  "assessment_id"
     t.integer  "ankle_plantar_flexion_left"
@@ -24,14 +27,14 @@ ActiveRecord::Schema.define(version: 20180226154907) do
     t.integer  "ankle_eversion_right"
     t.datetime "created_at",                  null: false
     t.datetime "updated_at",                  null: false
-    t.index ["assessment_id"], name: "index_ankles_on_assessment_id"
+    t.index ["assessment_id"], name: "index_ankles_on_assessment_id", using: :btree
   end
 
   create_table "assessments", force: :cascade do |t|
     t.integer  "client_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["client_id"], name: "index_assessments_on_client_id"
+    t.index ["client_id"], name: "index_assessments_on_client_id", using: :btree
   end
 
   create_table "clients", force: :cascade do |t|
@@ -43,7 +46,7 @@ ActiveRecord::Schema.define(version: 20180226154907) do
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
     t.integer  "assessment_id"
-    t.index ["assessment_id"], name: "index_clients_on_assessment_id"
+    t.index ["assessment_id"], name: "index_clients_on_assessment_id", using: :btree
   end
 
   create_table "cores", force: :cascade do |t|
@@ -57,7 +60,7 @@ ActiveRecord::Schema.define(version: 20180226154907) do
     t.datetime "created_at",                  null: false
     t.datetime "updated_at",                  null: false
     t.integer  "pelvic_stability"
-    t.index ["assessment_id"], name: "index_cores_on_assessment_id"
+    t.index ["assessment_id"], name: "index_cores_on_assessment_id", using: :btree
   end
 
   create_table "elbows", force: :cascade do |t|
@@ -80,7 +83,7 @@ ActiveRecord::Schema.define(version: 20180226154907) do
     t.datetime "created_at",                       null: false
     t.datetime "updated_at",                       null: false
     t.integer  "supination_right"
-    t.index ["assessment_id"], name: "index_elbows_on_assessment_id"
+    t.index ["assessment_id"], name: "index_elbows_on_assessment_id", using: :btree
   end
 
   create_table "hips", force: :cascade do |t|
@@ -103,7 +106,7 @@ ActiveRecord::Schema.define(version: 20180226154907) do
     t.integer  "hip_external_rotation_0_right"
     t.datetime "created_at",                     null: false
     t.datetime "updated_at",                     null: false
-    t.index ["assessment_id"], name: "index_hips_on_assessment_id"
+    t.index ["assessment_id"], name: "index_hips_on_assessment_id", using: :btree
   end
 
   create_table "knees", force: :cascade do |t|
@@ -114,7 +117,7 @@ ActiveRecord::Schema.define(version: 20180226154907) do
     t.integer  "knee_flexion_right"
     t.integer  "knee_extension_left"
     t.integer  "knee_extension_right"
-    t.index ["assessment_id"], name: "index_knees_on_assessment_id"
+    t.index ["assessment_id"], name: "index_knees_on_assessment_id", using: :btree
   end
 
   create_table "scapulas", force: :cascade do |t|
@@ -133,7 +136,7 @@ ActiveRecord::Schema.define(version: 20180226154907) do
     t.integer  "scapula_downward_rotation_right"
     t.datetime "created_at",                      null: false
     t.datetime "updated_at",                      null: false
-    t.index ["assessment_id"], name: "index_scapulas_on_assessment_id"
+    t.index ["assessment_id"], name: "index_scapulas_on_assessment_id", using: :btree
   end
 
   create_table "shoulders", force: :cascade do |t|
@@ -156,7 +159,7 @@ ActiveRecord::Schema.define(version: 20180226154907) do
     t.integer  "shoulder_horizontal_adduction_right"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
-    t.index ["assessment_id"], name: "index_shoulders_on_assessment_id"
+    t.index ["assessment_id"], name: "index_shoulders_on_assessment_id", using: :btree
   end
 
   create_table "trainers", force: :cascade do |t|
@@ -173,8 +176,8 @@ ActiveRecord::Schema.define(version: 20180226154907) do
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
     t.string   "name"
-    t.index ["email"], name: "index_trainers_on_email", unique: true
-    t.index ["reset_password_token"], name: "index_trainers_on_reset_password_token", unique: true
+    t.index ["email"], name: "index_trainers_on_email", unique: true, using: :btree
+    t.index ["reset_password_token"], name: "index_trainers_on_reset_password_token", unique: true, using: :btree
   end
 
   create_table "wrists", force: :cascade do |t|
@@ -189,7 +192,17 @@ ActiveRecord::Schema.define(version: 20180226154907) do
     t.integer  "wrist_ulnar_deviation_right"
     t.datetime "created_at",                   null: false
     t.datetime "updated_at",                   null: false
-    t.index ["assessment_id"], name: "index_wrists_on_assessment_id"
+    t.index ["assessment_id"], name: "index_wrists_on_assessment_id", using: :btree
   end
 
+  add_foreign_key "ankles", "assessments"
+  add_foreign_key "assessments", "clients"
+  add_foreign_key "clients", "assessments"
+  add_foreign_key "cores", "assessments"
+  add_foreign_key "elbows", "assessments"
+  add_foreign_key "hips", "assessments"
+  add_foreign_key "knees", "assessments"
+  add_foreign_key "scapulas", "assessments"
+  add_foreign_key "shoulders", "assessments"
+  add_foreign_key "wrists", "assessments"
 end
