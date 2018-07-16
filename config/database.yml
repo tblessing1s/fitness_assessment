@@ -17,5 +17,5 @@ test:
 production:
   <<: *default
   database: fitnessassessment_production
-  username: postgres
+  username: fitnessassessment
   password: postgres
