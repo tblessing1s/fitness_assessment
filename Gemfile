@@ -40,6 +40,7 @@ gem 'devise'
 gem 'ransack'
 gem 'bootstrap', '~> 4.0.0'
 gem 'sprockets-rails', '~> 3.2', '>= 3.2.1'
+gem 'sprockets', '~>3.7.2'
 
 group :test, :development do
   gem "rspec-rails"
